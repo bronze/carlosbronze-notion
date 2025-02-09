@@ -278,6 +278,7 @@ export function NotionPage({
         rootDomain={site.domain}
         fullPage={!isLiteMode}
         previewImages={!!recordMap.preview_images}
+        // WTF
         showCollectionViewDropdown={true}
         showTableOfContents={showTableOfContents}
         minTableOfContentsItems={minTableOfContentsItems}
