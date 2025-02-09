@@ -63,7 +63,7 @@ export default siteConfig({
     },
     {
       title: 'Contato',
-      pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
+      pageId: '195a2395517b8065be5ce1c8bfad2eaa'
     }
   ]
 })
