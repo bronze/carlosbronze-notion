@@ -62,3 +62,8 @@ body {
 .PageSocial {
   display: none;
 }
+.dark-mode {
+  .notion-collection-view-tabs-content-item:hover {
+    background-color: var(--bg-color-1);
+  }
+}
