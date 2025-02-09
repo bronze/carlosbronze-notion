@@ -67,4 +67,7 @@ body {
   .notion-collection-view-type-icon {
     fill: var(--fg-color);
   }
+  .notion-collection-view-tabs-content-item-active {
+    border-bottom: 2px solid var(--fg-color);
+  }
 }
