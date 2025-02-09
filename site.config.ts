@@ -64,6 +64,10 @@ export default siteConfig({
     {
       title: 'Contato',
       pageId: '195a2395517b8065be5ce1c8bfad2eaa'
+    },
+    {
+      title: 'Demo',
+      pageId: '2fea615a97a7401c81be486e4eec2e94'
     }
   ]
 })
