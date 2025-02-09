@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Carlos Bronze',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  domain: 'carlosbronze.com.br',
   author: 'Carlos Bronze',
 
   // open graph metadata (optional)
@@ -26,7 +26,7 @@ export default siteConfig({
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
-  defaultPageIcon: null,
+  defaultPageIcon: 'https://www.carlosbronze.com.br/apple-touch-icon.png',
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
@@ -50,16 +50,20 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  // navigationStyle: 'default'
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'Produtos',
+      pageId: '126a2395517b8092850bcb198e217ab6'
+    },
+    {
+      title: 'Sobre Mim',
+      pageId: '172a2395517b8015ab5cd9242bfc7586'
+    },
+    {
+      title: 'Contato',
+      pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
+    }
+  ]
 })
