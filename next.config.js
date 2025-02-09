@@ -10,6 +10,7 @@ export default withBundleAnalyzer({
   staticPageGenerationTimeout: 300,
   images: {
     remotePatterns: [
+      {protocol: 'https', hostname: 'img.notionusercontent.com'},
       {protocol: 'https', hostname: 'www.carlosbronze.com.br'},
       {protocol: 'https', hostname: 'www.notion.so'},
       {protocol: 'https', hostname: 'notion.so'},
