@@ -30,7 +30,9 @@ import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
+// VERCEL INCLUDES
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -292,7 +294,9 @@ export function NotionPage({
         pageAside={pageAside}
         footer={footer}
       />
+      {/* VERCEL STUFF */}
       <Analytics />
+      <SpeedInsights />
       {/* <GitHubShareButton /> */}
     </>
   )
