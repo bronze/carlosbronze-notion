@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 * {
   box-sizing: border-box;
 }
@@ -70,4 +72,16 @@ body {
   .notion-collection-view-tabs-content-item-active {
     border-bottom: 2px solid var(--fg-color);
   }
+}
+
+.quote {
+  quotes: '“' '„' '‚' '‘';
+}
+.quote::before {
+  content: open-quote;
+  font-family: 'Times New Roman', Times, serif;
+}
+.quote::after {
+  content: close-quote;
+  font-family: 'Times New Roman', Times, serif;
 }

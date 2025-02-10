@@ -74,7 +74,11 @@ export class HeroHeader extends Component<{ className?: string }> {
           ' notion-page notion-page-has-cover notion-page-has-icon notion-page-has-image-icon notion-full-page index-page'
         }
       >
-        <h1 className='text-2xl md:text-3xl font-semibold'>“{quote}”</h1>
+        <blockquote>
+          <p className='quote text-2xl md:text-4xl leading-[1.65] font-bold'>
+            {quote}
+          </p>
+        </blockquote>
         <p className='text-lg mt-2'>— {author}</p>
       </header>
     )
