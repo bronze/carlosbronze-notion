@@ -76,17 +76,19 @@ body {
     border-bottom: 2px solid var(--fg-color);
   }
 }
-
-.quote {
-  quotes: '“' '„' '‚' '‘';
-}
-.quote::before {
-  content: open-quote;
-  font-family: 'Times New Roman', Times, serif;
-}
-.quote::after {
-  content: close-quote;
-  font-family: 'Times New Roman', Times, serif;
+blockquote {
+  p.quote {
+    text-wrap: balance;
+    quotes: '“' '„' '‚' '‘';
+  }
+  p.quote::before {
+    content: open-quote;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  p.quote::after {
+    content: close-quote;
+    font-family: 'Times New Roman', Times, serif;
+  }
 }
 .notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image {
   /* top: 0; */
