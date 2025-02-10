@@ -404,3 +404,10 @@
 .notion-equation.notion-equation-block {
   align-items: center;
 }
+.notion-page-icon-hero.notion-page-icon-image {
+  /* visibility: hidden;
+  display: none !important; */
+}
+.notion-page-icon-hero.notion-page-icon-image {
+  box-shadow: none !important;
+}
