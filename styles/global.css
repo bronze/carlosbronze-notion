@@ -85,3 +85,6 @@ body {
   content: close-quote;
   font-family: 'Times New Roman', Times, serif;
 }
+.notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image {
+  top: 0;
+}
