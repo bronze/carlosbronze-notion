@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
 
 * {
   box-sizing: border-box;
@@ -91,4 +94,20 @@ body {
 .notion-hr {
   /* color: red; */
   @apply h-px my-8 bg-gray-200 border-0 dark:bg-gray-700;
+}
+.notion-link:focus,
+.notion-link:hover {
+  background-image: none !important;
+  border-bottom-color: var(--fg-color-2);
+}
+
+:root {
+  --radius: 0.6rem;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
