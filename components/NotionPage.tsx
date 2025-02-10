@@ -7,7 +7,12 @@ import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { type PageBlock } from 'notion-types'
-import { formatDate, getBlockTitle, getPageProperty } from 'notion-utils'
+import {
+  formatDate,
+  getBlockTitle,
+  getPageProperty,
+  parsePageId
+} from 'notion-utils'
 import * as React from 'react'
 import BodyClassName from 'react-body-classname'
 import {
@@ -155,6 +160,11 @@ const propertyTextValue = (
   return defaultFn()
 }
 
+const HeroHeader = dynamic<{ className?: string }>(
+  () => import('./HeroHeader').then((m) => m.HeroHeader),
+  { ssr: false }
+)
+
 export function NotionPage({
   site,
   recordMap,
@@ -203,6 +213,9 @@ export function NotionPage({
   const isBlogPost =
     block?.type === 'page' && block?.parent_table === 'collection'
 
+  const isBioPage =
+    parsePageId(block?.id) === parsePageId('172a2395517b80ab99f3c11f5bb41e8f')
+
   const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
@@ -214,6 +227,14 @@ export function NotionPage({
   )
 
   const footer = React.useMemo(() => <Footer />, [])
+
+  const pageCover = React.useMemo(() => {
+    if (isBioPage) {
+      return <HeroHeader className='pb-12 mb-12' />
+    } else {
+      return null
+    }
+  }, [isBioPage])
 
   if (router.isFallback) {
     return <Loading />
@@ -293,6 +314,7 @@ export function NotionPage({
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
         footer={footer}
+        pageCover={pageCover}
       />
       {/* VERCEL STUFF */}
       <Analytics />

@@ -411,3 +411,6 @@
 .notion-page-icon-hero.notion-page-icon-image {
   box-shadow: none !important;
 }
+.notion-page-cover-wrapper {
+  box-shadow: none !important;
+}
