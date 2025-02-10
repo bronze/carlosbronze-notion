@@ -194,8 +194,9 @@
 .notion-page-cover-wrapper,
 .notion-page-cover-wrapper span,
 .notion-page-cover-wrapper img {
-  max-width: 1200px !important;
-  border-radius: 24px;
+  /* CHANGED THIS */
+  /* max-width: 1200px !important; */
+  /* border-radius: 24px; */
 }
 
 .notion-page-cover-wrapper {
@@ -400,6 +401,6 @@
   color: var(--fg-color-2);
 }
 
-.notion-equation.notion-equation-block{
+.notion-equation.notion-equation-block {
   align-items: center;
 }
