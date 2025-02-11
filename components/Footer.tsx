@@ -130,7 +130,7 @@ export function FooterImpl() {
            {config.onlyfans && (
           <a
             className={styles.onlyfans}
-            href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}
+            href={`https://www.carlosbronze.com.br/onlyfans`}
             title={`OnlyFans ${config.author}`}
             target='_blank'
             rel='noopener noreferrer'
