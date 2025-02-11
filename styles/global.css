@@ -4,25 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 :root {
   /* Classic Nord color names */
-  --nord0: #2E3440;
-  --nord1: #3B4252;
-  --nord2: #434C5E;
-  --nord3: #4C566A;
-  --nord4: #D8DEE9;
-  --nord5: #E5E9F0;
-  --nord6: #ECEFF4;
-  --nord7: #8FBCBB;
-  --nord8: #88C0D0;
-  --nord9: #81A1C1;
-  --nord10: #5E81AC;
-  --nord11: #BF616A;
-  --nord12: #D08770;
-  --nord13: #EBCB8B;
-  --nord14: #A3BE8C;
-  --nord15: #B48EAD;
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
 
   /* Default (Light Mode) Highlight Color */
-  --highlight: var(--nord11); /* Light mode uses nord13 */ --radius: 0.6rem;
+  --highlight: var(--nord11); /* Light mode uses nord13 */
+  --radius: 0.6rem;
 }
 
 .dark-mode {
@@ -138,4 +139,11 @@ blockquote {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+.notion-page-link {
+  display: flex;
+  place-content: center;
+  border-radius: 0.3rem;
+  height: auto;
+  @apply py-4;
 }
