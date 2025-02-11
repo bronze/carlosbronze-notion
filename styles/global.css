@@ -106,15 +106,23 @@ body {
 blockquote {
   p.quote {
     text-wrap: balance;
+    position: relative;
     quotes: '“' '„' '‚' '‘';
+  }
+  p.quote::before,
+  p.quote::after {
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 2em; */
   }
   p.quote::before {
     content: open-quote;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    position: absolute;
+    left: -0.6em;
+    top: -0.3em;
   }
   p.quote::after {
     content: close-quote;
-    font-family: 'Times New Roman', Times, serif;
   }
 }
 .notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image {
