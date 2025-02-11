@@ -1,5 +1,22 @@
 {
+  "editor.formatOnSave": true,
   "typescript.tsdk": "./node_modules/typescript/lib",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ],
+
+  "eslint.format.enable": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+
   "files.exclude": {
     "**/logs": true,
     "**/*.log": true,

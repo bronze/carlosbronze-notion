@@ -5,7 +5,10 @@
   "useTabs": false,
   "tabWidth": 2,
   "bracketSpacing": true,
-  "bracketSameLine": false,
+  "bracketSameLine": true,
   "arrowParens": "always",
-  "trailingComma": "none"
+  "trailingComma": "none",
+    "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }
