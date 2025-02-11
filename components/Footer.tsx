@@ -49,7 +49,11 @@ export function FooterImpl() {
             role='button'
             onClick={onToggleDarkMode}
             title='Toggle dark mode'>
-            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+            {isDarkMode ? (
+              <Icon icon='mdi:theme-light-dark' />
+            ) : (
+              <Icon icon='mdi:theme-light-dark' />
+            )}
           </a>
         )}
       </div>
