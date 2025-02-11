@@ -156,7 +156,7 @@ blockquote {
   @apply py-4;
 }
 .notion-table {
-  width: unset;
-  max-width: unset;
-  margin-inline: auto;
+  /* width: unset !important; */
+  /* max-width: unset !important; */
+  /* margin-inline: auto; */
 }
