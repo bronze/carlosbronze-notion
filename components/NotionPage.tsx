@@ -208,8 +208,8 @@ export function NotionPage({
   const keys = Object.keys(recordMap?.block || {})
   const block = recordMap?.block?.[keys[0]]?.value
 
-  // const isRootPage =
-  //   parsePageId(block?.id) === parsePageId(site?.rootNotionPageId)
+  const isRootPage =
+    parsePageId(block?.id) === parsePageId(site?.rootNotionPageId)
   const isBlogPost =
     block?.type === 'page' && block?.parent_table === 'collection'
 
@@ -248,6 +248,7 @@ export function NotionPage({
 
   console.log('notion page', {
     isDev: config.isDev,
+    isRootPage,
     title,
     pageId,
     rootNotionPageId: site.rootNotionPageId,
@@ -293,7 +294,8 @@ export function NotionPage({
       <NotionRenderer
         bodyClassName={cs(
           styles.notion,
-          pageId === site.rootNotionPageId && 'index-page'
+          pageId === site.rootNotionPageId && 'index-page',
+          isRootPage && 'root-page'
         )}
         darkMode={isDarkMode}
         components={components}

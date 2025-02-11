@@ -140,10 +140,15 @@ blockquote {
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
-.notion-page-link {
+.index-page .notion-page-link {
   display: flex;
   place-content: center;
   border-radius: 0.3rem;
   height: auto;
   @apply py-4;
+}
+.notion-table {
+  width: unset;
+  max-width: unset;
+  margin-inline: auto;
 }
