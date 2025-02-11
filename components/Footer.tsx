@@ -1,7 +1,10 @@
+
+import { Icon } from "@iconify/react";
+// import {SiBluesky, SiGithub, SiOnlyfans} from '@icons-pack/react-simple-icons';
 import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
-import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
-import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
+// import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+// import {FaLinkedin} from '@react-icons/all-files/fa/FaLinkedin'
+import {FaMastodon} from '@react-icons/all-files/fa/FaMastodon'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
@@ -97,7 +100,7 @@ export function FooterImpl() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FaGithub />
+            <Icon icon="simple-icons:github" />
           </a>
         )}
 
@@ -109,7 +112,30 @@ export function FooterImpl() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FaLinkedin />
+            <Icon icon="simple-icons:linkedin" />
+          </a>
+        )}
+           {config.bluesky && (
+          <a
+            className={styles.bluesky}
+            href={`https://bsky.app/profile/${config.bluesky}`}
+            title={`Bluesky ${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Icon icon="simple-icons:bluesky" />
+
+          </a>
+        )}
+           {config.onlyfans && (
+          <a
+            className={styles.onlyfans}
+            href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}
+            title={`OnlyFans ${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Icon icon="simple-icons:onlyfans" />
           </a>
         )}
 

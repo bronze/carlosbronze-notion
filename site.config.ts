@@ -20,6 +20,8 @@ export default siteConfig({
   twitter: '',
   github: 'bronze',
   linkedin: 'carlosbronze',
+  bluesky: 'carlosbronze.com.br',
+  onlyfans: 'lol',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`

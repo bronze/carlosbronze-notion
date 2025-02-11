@@ -103,7 +103,8 @@
 }
 
 .github:hover {
-  color: #c9510c;
+  /* color: #c9510c; */
+  color: var(--highlight);
 }
 
 .youtube:hover {
@@ -112,7 +113,30 @@
 
 .linkedin:hover {
   color: #0077b5;
+
 }
+.onlyfans:hover {
+  color: var(--highlight);
+}
+.bluesky:hover {
+  color: var(--highlight);
+}
+.settings {
+  /* This ensures the nested selector works in CSS Modules */
+}
+
+.settings a {
+  &:hover {
+    color: var(--highlight);
+  }
+}
+
+.social a {
+  &:hover {
+    color: var(--highlight);
+  }
+}
+
 
 .newsletter:hover {
   color: #777777;
