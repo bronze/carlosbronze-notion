@@ -1,10 +1,9 @@
-
-import { Icon } from "@iconify/react";
+import { Icon } from '@iconify/react'
 // import {SiBluesky, SiGithub, SiOnlyfans} from '@icons-pack/react-simple-icons';
 import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
 // import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 // import {FaLinkedin} from '@react-icons/all-files/fa/FaLinkedin'
-import {FaMastodon} from '@react-icons/all-files/fa/FaMastodon'
+import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
@@ -49,8 +48,7 @@ export function FooterImpl() {
             href='#'
             role='button'
             onClick={onToggleDarkMode}
-            title='Toggle dark mode'
-          >
+            title='Toggle dark mode'>
             {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
           </a>
         )}
@@ -62,9 +60,7 @@ export function FooterImpl() {
             className={styles.twitter}
             href={`https://twitter.com/${config.twitter}`}
             title={`Twitter @${config.twitter}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             <FaTwitter />
           </a>
         )}
@@ -74,8 +70,7 @@ export function FooterImpl() {
             className={styles.mastodon}
             href={config.mastodon}
             title={`Mastodon ${config.getMastodonHandle()}`}
-            rel='me'
-          >
+            rel='me'>
             <FaMastodon />
           </a>
         )}
@@ -85,9 +80,7 @@ export function FooterImpl() {
             className={styles.zhihu}
             href={`https://zhihu.com/people/${config.zhihu}`}
             title={`Zhihu @${config.zhihu}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             <FaZhihu />
           </a>
         )}
@@ -97,10 +90,8 @@ export function FooterImpl() {
             className={styles.github}
             href={`https://github.com/${config.github}`}
             title={`GitHub @${config.github}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Icon icon="simple-icons:github" />
+            rel='noopener noreferrer'>
+            <Icon icon='simple-icons:github' />
           </a>
         )}
 
@@ -109,33 +100,26 @@ export function FooterImpl() {
             className={styles.linkedin}
             href={`https://www.linkedin.com/in/${config.linkedin}`}
             title={`LinkedIn ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Icon icon="simple-icons:linkedin" />
+            rel='noopener noreferrer'>
+            <Icon icon='simple-icons:linkedin' />
           </a>
         )}
-           {config.bluesky && (
+        {config.bluesky && (
           <a
             className={styles.bluesky}
             href={`https://bsky.app/profile/${config.bluesky}`}
             title={`Bluesky ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Icon icon="simple-icons:bluesky" />
-
+            rel='noopener noreferrer'>
+            <Icon icon='simple-icons:bluesky' />
           </a>
         )}
-           {config.onlyfans && (
+        {config.onlyfans && (
           <a
             className={styles.onlyfans}
             href={`https://www.carlosbronze.com.br/onlyfans`}
             title={`OnlyFans ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Icon icon="simple-icons:onlyfans" />
+            rel='noopener noreferrer'>
+            <Icon icon='simple-icons:onlyfans' />
           </a>
         )}
 
@@ -144,9 +128,7 @@ export function FooterImpl() {
             className={styles.newsletter}
             href={`${config.newsletter}`}
             title={`Newsletter ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             <FaEnvelopeOpenText />
           </a>
         )}
@@ -156,9 +138,7 @@ export function FooterImpl() {
             className={styles.youtube}
             href={`https://www.youtube.com/${config.youtube}`}
             title={`YouTube ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             <FaYoutube />
           </a>
         )}
