@@ -1,14 +1,18 @@
 import type * as types from 'notion-types'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
-import cs from 'classnames'
 import * as React from 'react'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
+import { Button } from '@/components/ui/button'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from '@/components/ui/tooltip'
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
-
-import styles from './styles.module.css'
 
 function ToggleThemeButton() {
   const [hasMounted, setHasMounted] = React.useState(false)
@@ -18,17 +22,25 @@ function ToggleThemeButton() {
     setHasMounted(true)
   }, [])
 
-  const onToggleTheme = React.useCallback(() => {
-    toggleDarkMode()
-  }, [toggleDarkMode])
-
   return (
-    <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
-      onClick={onToggleTheme}
-    >
-      {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-    </div>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant='ghost'
+            size='icon'
+            onClick={toggleDarkMode}
+            className='p-2 cursor-pointer'>
+            {hasMounted && isDarkMode ? (
+              <IoMoonSharp className='text-lg' />
+            ) : (
+              <IoSunnyOutline className='text-lg' />
+            )}
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>Toggle Theme</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   )
 }
 
@@ -44,40 +56,30 @@ export function NotionPageHeader({
   }
 
   return (
-    <header className='notion-header'>
-      <div className='notion-nav-header'>
+    <header className='notion-header flex justify-between px-4 py-2'>
+      <div className='flex justify-between container items-center  max-w-5xl mx-auto '>
         <Breadcrumbs block={block} rootOnly={true} />
 
-        <div className='notion-nav-header-rhs breadcrumbs'>
-          {navigationLinks
-            ?.map((link, index) => {
-              if (!link.pageId && !link.url) {
-                return null
-              }
+        <div className='flex items-center gap-2 '>
+          {navigationLinks?.map((link, index) => {
+            if (!link.pageId && !link.url) return null
 
-              if (link.pageId) {
-                return (
-                  <components.PageLink
-                    href={mapPageUrl(link.pageId)}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.PageLink>
-                )
-              } else {
-                return (
-                  <components.Link
-                    href={link.url}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.Link>
-                )
-              }
-            })
-            .filter(Boolean)}
+            return link.pageId ? (
+              <components.PageLink
+                href={mapPageUrl(link.pageId)}
+                key={index}
+                className='breadcrumb button text-sm font-medium text-muted-foreground hover:text-primary'>
+                {link.title}
+              </components.PageLink>
+            ) : (
+              <components.Link
+                href={link.url}
+                key={index}
+                className='text-sm font-medium text-muted-foreground hover:text-primary'>
+                {link.title}
+              </components.Link>
+            )
+          })}
 
           <ToggleThemeButton />
 

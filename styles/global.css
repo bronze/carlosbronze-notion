@@ -22,13 +22,12 @@
   --nord15: #B48EAD;
 
   /* Default (Light Mode) Highlight Color */
-  --highlight: var(--nord11); /* Light mode uses nord13 */
+  --highlight: var(--nord11); /* Light mode uses nord13 */ --radius: 0.6rem;
 }
 
 .dark-mode {
   --highlight: var(--nord10); /* Dark mode uses nord10 */
 }
-
 
 * {
   box-sizing: border-box;
