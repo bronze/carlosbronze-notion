@@ -246,9 +246,21 @@ export function NotionPage({
 
   const title = getBlockTitle(block, recordMap) || site.name
 
+  const collectionId =
+    Object.keys(recordMap.collection)[0] || 'No Collection Found'
+  const isPeople = collectionId === 'b625732d-c414-40b8-b3b6-90b6142445ff'
+  // console.log('isPeople:', isPeople)
+
+  // Check if it is both a "People" page and a "Blog Post"
+  const isPeopleBlogPost = isBlogPost && isPeople
+
   console.log('notion page', {
     isDev: config.isDev,
     isRootPage,
+    isPeople,
+    isBlogPost,
+    isPeopleBlogPost,
+    collectionId, // Add this to debug collection ID
     title,
     pageId,
     rootNotionPageId: site.rootNotionPageId,
