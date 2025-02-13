@@ -123,6 +123,8 @@ blockquote {
   }
   p.quote::after {
     content: close-quote;
+    font-size: 1.6em;
+    line-height: 0.1;
   }
 }
 .notion-page-has-cover .notion-page-icon-hero.notion-page-icon-image {
