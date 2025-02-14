@@ -60,7 +60,7 @@ export default siteConfig({
       pageId: '126a2395517b8092850bcb198e217ab6'
     },
     {
-      title: 'Sobre Mim',
+      title: 'Sobre',
       pageId: '172a2395517b8015ab5cd9242bfc7586'
     },
     {

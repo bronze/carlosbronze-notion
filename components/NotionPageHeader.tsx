@@ -98,7 +98,7 @@ export function NotionPageHeader({
               </Button>
             </DrawerTrigger>
             <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none top-0'>
-              <nav className='flex flex-col gap-4 bg-(--bg-color) text-(--fg-color)'>
+              <nav className='flex flex-col gap-4'>
                 {navigationLinks?.map((link, index) => {
                   if (!link.pageId && !link.url) return null
 
