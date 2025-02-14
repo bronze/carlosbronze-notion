@@ -97,7 +97,7 @@ export function NotionPageHeader({
                 <IoMenu className='text-xl' />
               </Button>
             </DrawerTrigger>
-            <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none'>
+            <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-1 !border-(--border)'>
               <nav className='flex flex-col gap-4'>
                 {navigationLinks?.map((link, index) => {
                   if (!link.pageId && !link.url) return null

@@ -20,7 +20,7 @@
   --nord13: #ebcb8b;
   --nord14: #a3be8c;
   --nord15: #b48ead;
-
+  --border: #e5e7eb;
   /* Default (Light Mode) Highlight Color */
   --highlight: var(--nord11); /* Light mode uses nord13 */
   --radius: 0.6rem;
@@ -28,6 +28,7 @@
 
 .dark-mode {
   --highlight: var(--nord10); /* Dark mode uses nord10 */
+  --border: hsl(240 3.7% 15.9%);
 }
 
 * {
@@ -161,4 +162,17 @@ blockquote {
   /* width: unset !important; */
   /* max-width: unset !important; */
   /* margin-inline: auto; */
+}
+@theme inline {
+  --color-border: var(--border);
+  --background: var(--bg-color);
+  --foreground: var(--fg-color);
+}
+@layer base {
+  * {
+    /* @apply border-border outline-ring/50; */
+  }
+  body {
+    /* @apply bg-background text-foreground; */
+  }
 }
