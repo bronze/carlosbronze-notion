@@ -97,7 +97,7 @@ export function NotionPageHeader({
                 <IoMenu className='text-xl' />
               </Button>
             </DrawerTrigger>
-            <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none top-0'>
+            <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none'>
               <nav className='flex flex-col gap-4'>
                 {navigationLinks?.map((link, index) => {
                   if (!link.pageId && !link.url) return null
@@ -121,7 +121,7 @@ export function NotionPageHeader({
 
                 <ToggleThemeButton />
 
-                {isSearchEnabled && <Search block={block} title={null} />}
+                {/* {isSearchEnabled && <Search block={block} title={null} />} */}
               </nav>
             </DrawerContent>
           </Drawer>
