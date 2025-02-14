@@ -6,7 +6,7 @@ import * as React from 'react'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import {
   Tooltip,
   TooltipContent,
@@ -91,13 +91,13 @@ export function NotionPageHeader({
 
         {/* Mobile Menu */}
         <div className='md:hidden'>
-          <Dialog>
-            <DialogTrigger asChild>
+          <Drawer>
+            <DrawerTrigger asChild>
               <Button variant='ghost' size='icon'>
                 <IoMenu className='text-xl' />
               </Button>
-            </DialogTrigger>
-            <DialogContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none'>
+            </DrawerTrigger>
+            <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none top-0'>
               <nav className='flex flex-col gap-4 bg-(--bg-color) text-(--fg-color)'>
                 {navigationLinks?.map((link, index) => {
                   if (!link.pageId && !link.url) return null
@@ -123,8 +123,8 @@ export function NotionPageHeader({
 
                 {isSearchEnabled && <Search block={block} title={null} />}
               </nav>
-            </DialogContent>
-          </Dialog>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </header>
