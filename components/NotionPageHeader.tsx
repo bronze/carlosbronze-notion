@@ -1,11 +1,12 @@
 import type * as types from 'notion-types'
-// import { Icon } from '@iconify/react'
+import { IoMenu } from '@react-icons/all-files/io5/IoMenu'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import * as React from 'react'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
 import { Button } from '@/components/ui/button'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import {
   Tooltip,
   TooltipContent,
@@ -58,10 +59,11 @@ export function NotionPageHeader({
 
   return (
     <header className='notion-header flex justify-between px-4 py-2'>
-      <div className='flex justify-between container items-center  max-w-5xl mx-auto '>
+      <div className='flex justify-between container items-center max-w-5xl mx-auto w-full'>
         <Breadcrumbs block={block} rootOnly={true} />
 
-        <div className='flex items-center gap-2 '>
+        {/* Desktop Navigation */}
+        <div className='hidden md:flex items-center gap-2'>
           {navigationLinks?.map((link, index) => {
             if (!link.pageId && !link.url) return null
 
@@ -85,6 +87,44 @@ export function NotionPageHeader({
           <ToggleThemeButton />
 
           {isSearchEnabled && <Search block={block} title={null} />}
+        </div>
+
+        {/* Mobile Menu */}
+        <div className='md:hidden'>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant='ghost' size='icon'>
+                <IoMenu className='text-xl' />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className='p-6 bg-(--bg-color) text-(--fg-color) border-none'>
+              <nav className='flex flex-col gap-4 bg-(--bg-color) text-(--fg-color)'>
+                {navigationLinks?.map((link, index) => {
+                  if (!link.pageId && !link.url) return null
+
+                  return link.pageId ? (
+                    <components.PageLink
+                      href={mapPageUrl(link.pageId)}
+                      key={index}
+                      className='text-lg font-medium'>
+                      {link.title}
+                    </components.PageLink>
+                  ) : (
+                    <components.Link
+                      href={link.url}
+                      key={index}
+                      className='text-lg font-medium '>
+                      {link.title}
+                    </components.Link>
+                  )
+                })}
+
+                <ToggleThemeButton />
+
+                {isSearchEnabled && <Search block={block} title={null} />}
+              </nav>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </header>
