@@ -72,7 +72,7 @@ export class HeroHeader extends Component<{ className?: string }> {
         className={
           // pb-12 mb-12 notion-page notion-page-has-cover notion-page-has-icon notion-page-has-image-icon notion-full-page index-page
           this.props.className +
-          'container max-w-5xl mx-auto pt-24 pb-16 min-h-[250px]'
+          'container max-w-5xl mx-auto pt-24 pb-16 min-h-[250px] px-12'
         }>
         <div className='quotewrapper'>
           <blockquote>
