@@ -196,3 +196,7 @@ blockquote {
     width: 16px;
   }
 }
+.index-page .notion-title {
+  opacity: 0;
+  position: absolute;
+}
