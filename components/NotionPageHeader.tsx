@@ -59,7 +59,7 @@ export function NotionPageHeader({
 
   return (
     <header className='notion-header flex justify-between px-4 py-2'>
-      <div className='flex justify-between container items-center max-w-5xl mx-auto w-full'>
+      <div className='flex justify-between container items-center max-w-5xl mx-auto'>
         <Breadcrumbs block={block} rootOnly={true} />
 
         {/* Desktop Navigation */}

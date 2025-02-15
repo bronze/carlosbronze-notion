@@ -37,6 +37,7 @@ export function FooterImpl() {
 
   return (
     <footer className={styles.footer}>
+      {/* px-4 py-2 w-full flex md:flex-row justify-between items-center flex-col */}
       <div className={styles.copyright}>
         Copyright {currentYear} {config.author}
       </div>
