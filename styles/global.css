@@ -203,5 +203,5 @@ blockquote {
   }
 }
 .notion-page {
-  @apply container max-w-5xl mx-auto;
+  /* @apply container max-w-5xl mx-auto; */
 }
