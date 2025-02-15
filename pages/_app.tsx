@@ -14,6 +14,7 @@ import 'styles/notion.css'
 import 'styles/prism-theme.css'
 
 import type { AppProps } from 'next/app'
+import * as amplitude from '@amplitude/analytics-browser'
 import * as Fathom from 'fathom-client'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
@@ -53,6 +54,10 @@ export default function App({ Component, pageProps }: AppProps) {
     if (posthogId) {
       posthog.init(posthogId, posthogConfig)
     }
+    amplitude.init('57753e064d7d9de9c287b8e76328b6a3', {
+      sessionReplay: { enabled: true },
+      autocapture: { elementInteractions: true }
+    })
 
     router.events.on('routeChangeComplete', onRouteChangeComplete)
 
