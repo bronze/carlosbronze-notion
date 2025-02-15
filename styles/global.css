@@ -186,7 +186,13 @@ blockquote {
 .footer {
   @apply px-4 py-2 w-full flex flex-row justify-between items-center;
 }
-.notion-header .searchIcon {
-  height: 16px;
-  width: 16px;
+.notion-header {
+  .notion-search-button {
+    height: 44px;
+    width: 44px;
+  }
+  .searchIcon {
+    height: 16px;
+    width: 16px;
+  }
 }
