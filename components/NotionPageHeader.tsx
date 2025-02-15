@@ -8,6 +8,11 @@ import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 import { Button } from '@/components/ui/button'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink
+} from '@/components/ui/navigation-menu'
+import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -57,32 +62,46 @@ export function NotionPageHeader({
     return <Header block={block} />
   }
 
+  const renderNavigationLinks = () => (
+    <>
+      {navigationLinks?.map((link, index) => {
+        if (!link.pageId && !link.url) return null
+
+        return (
+          <NavigationMenu key={index} className='list-none'>
+            <NavigationMenuItem>
+              {link.pageId ? (
+                <NavigationMenuLink asChild>
+                  <components.PageLink
+                    href={mapPageUrl(link.pageId)}
+                    className='breadcrumb button text-sm font-medium text-muted-foreground hover:text-primary'>
+                    {link.title}
+                  </components.PageLink>
+                </NavigationMenuLink>
+              ) : (
+                <NavigationMenuLink asChild>
+                  <components.Link
+                    href={link.url}
+                    className='text-sm font-medium text-muted-foreground hover:text-primary'>
+                    {link.title}
+                  </components.Link>
+                </NavigationMenuLink>
+              )}
+            </NavigationMenuItem>
+          </NavigationMenu>
+        )
+      })}
+    </>
+  )
+
   return (
     <header className='notion-header flex justify-between px-4 py-2'>
       <div className='flex justify-between container items-center max-w-5xl mx-auto'>
         <Breadcrumbs block={block} rootOnly={true} />
 
         {/* Desktop Navigation */}
-        <div className='hidden md:flex items-center gap-2'>
-          {navigationLinks?.map((link, index) => {
-            if (!link.pageId && !link.url) return null
-
-            return link.pageId ? (
-              <components.PageLink
-                href={mapPageUrl(link.pageId)}
-                key={index}
-                className='breadcrumb button text-sm font-medium text-muted-foreground hover:text-primary'>
-                {link.title}
-              </components.PageLink>
-            ) : (
-              <components.Link
-                href={link.url}
-                key={index}
-                className='text-sm font-medium text-muted-foreground hover:text-primary'>
-                {link.title}
-              </components.Link>
-            )
-          })}
+        <div className='hidden md:flex items-center gap-2 '>
+          {renderNavigationLinks()}
 
           <ToggleThemeButton />
 
@@ -99,29 +118,11 @@ export function NotionPageHeader({
             </DrawerTrigger>
             <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-1 !border-(--border)'>
               <nav className='flex flex-col gap-4'>
-                {navigationLinks?.map((link, index) => {
-                  if (!link.pageId && !link.url) return null
-
-                  return link.pageId ? (
-                    <components.PageLink
-                      href={mapPageUrl(link.pageId)}
-                      key={index}
-                      className='text-lg font-medium'>
-                      {link.title}
-                    </components.PageLink>
-                  ) : (
-                    <components.Link
-                      href={link.url}
-                      key={index}
-                      className='text-lg font-medium '>
-                      {link.title}
-                    </components.Link>
-                  )
-                })}
+                {renderNavigationLinks()}
 
                 <ToggleThemeButton />
 
-                {/* {isSearchEnabled && <Search block={block} title={null} />} */}
+                {isSearchEnabled && <Search block={block} title={null} />}
               </nav>
             </DrawerContent>
           </Drawer>
