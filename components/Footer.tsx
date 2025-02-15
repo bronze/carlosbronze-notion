@@ -49,7 +49,7 @@ export function FooterImpl() {
             href='#'
             role='button'
             onClick={onToggleDarkMode}
-            title='Toggle dark mode'>
+            title='Dark Mode Toggle'>
             {isDarkMode ? (
               <Icon icon='mdi:theme-light-dark' />
             ) : (
