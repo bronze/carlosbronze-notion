@@ -184,15 +184,9 @@ blockquote {
   margin: unset;
 }
 .footer {
-
   @apply px-4 py-2 w-full flex flex-row justify-between items-center;
 }
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+.notion-header .searchIcon {
+  height: 16px;
+  width: 16px;
 }

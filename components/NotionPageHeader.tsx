@@ -37,11 +37,11 @@ function ToggleThemeButton() {
             variant='ghost'
             size='icon'
             onClick={toggleDarkMode}
-            className='p-2 cursor-pointer'>
+            className='p-2 cursor-pointer button rounded-[3px] hover:bg-(--bg-color-0)'>
             {hasMounted && isDarkMode ? (
-              <IoMoonSharp className='text-lg' />
+              <IoMoonSharp size='lg ' className='text-xl' />
             ) : (
-              <IoSunnyOutline className='text-lg' />
+              <IoSunnyOutline size='lg ' className='text-xl' />
             )}
           </Button>
         </TooltipTrigger>
