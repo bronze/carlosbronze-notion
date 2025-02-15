@@ -36,7 +36,7 @@ export function FooterImpl() {
   }, [])
 
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} footerlinks`}>
       {/* px-4 py-2 w-full flex md:flex-row justify-between items-center flex-col */}
       <div className={styles.copyright}>
         Copyright {currentYear} {config.author}
@@ -113,7 +113,7 @@ export function FooterImpl() {
           <a
             className={styles.bluesky}
             href={`https://bsky.app/profile/${config.bluesky}`}
-            title={`Bluesky ${config.author}`}
+            title={`BlueSky`}
             rel='noopener noreferrer'>
             <Icon icon='simple-icons:bluesky' />
           </a>
