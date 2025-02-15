@@ -175,9 +175,6 @@ blockquote {
   body {
     /* @apply bg-background text-foreground; */
   }
-  .notion-page-scroller {
-    @apply container max-w-5xl mx-auto;
-  }
 }
 
 .notion-page-scroller main.notion-page {
@@ -204,4 +201,7 @@ blockquote {
   article {
     display: none;
   }
+}
+.notion-page {
+  @apply container max-w-5xl mx-auto;
 }
