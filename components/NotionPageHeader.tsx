@@ -68,12 +68,13 @@ export function NotionPageHeader({
         if (!link.pageId && !link.url) return null
 
         return (
-          <NavigationMenu key={index} className='list-none'>
+          <NavigationMenu key={index} className='list-none navmenu'>
             <NavigationMenuItem>
               {link.pageId ? (
                 <NavigationMenuLink asChild>
                   <components.PageLink
                     href={mapPageUrl(link.pageId)}
+                    title={link.title}
                     className='breadcrumb button text-sm font-medium text-muted-foreground hover:text-primary'>
                     {link.title}
                   </components.PageLink>
