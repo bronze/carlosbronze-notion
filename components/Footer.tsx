@@ -127,6 +127,15 @@ export function FooterImpl() {
             <Icon icon='simple-icons:onlyfans' />
           </a>
         )}
+        {config.resume && (
+          <a
+            className={styles.resume}
+            href={`${config.resume}`}
+            title={`Resume ${config.author}`}
+            rel='noopener noreferrer'>
+            <Icon icon='mdi:document' />
+          </a>
+        )}
 
         {config.newsletter && (
           <a

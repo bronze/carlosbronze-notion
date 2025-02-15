@@ -15,6 +15,7 @@ export interface SiteConfig {
   linkedin?: string
   bluesky?: string
   onlyfans?: string
+  resume?: string
   newsletter?: string
   youtube?: string
   zhihu?: string
