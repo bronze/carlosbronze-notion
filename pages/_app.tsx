@@ -22,6 +22,8 @@ import * as React from 'react'
 
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
+  amplitudeConfig,
+  amplitudeId,
   fathomConfig,
   fathomId,
   isServer,
@@ -54,10 +56,9 @@ export default function App({ Component, pageProps }: AppProps) {
     if (posthogId) {
       posthog.init(posthogId, posthogConfig)
     }
-    amplitude.init('57753e064d7d9de9c287b8e76328b6a3', {
-      sessionReplay: { enabled: true },
-      autocapture: { elementInteractions: true }
-    })
+    if (amplitudeId) {
+      amplitude.init(amplitudeId, amplitudeConfig)
+    }
 
     router.events.on('routeChangeComplete', onRouteChangeComplete)
 
