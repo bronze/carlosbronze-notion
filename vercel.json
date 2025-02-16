@@ -4,11 +4,6 @@
       "source": "/onlyfans",
       "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "permanent": false
-    },
-    {
-      "source": "/:path*",
-      "destination": "https://carlosbronze.com.br/:path*",
-      "permanent": false
     }
   ]
 }
