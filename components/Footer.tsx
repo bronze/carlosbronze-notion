@@ -113,7 +113,7 @@ export function FooterImpl() {
           <a
             className={styles.bluesky}
             href={`https://bsky.app/profile/${config.bluesky}`}
-            title={`BlueSky`}
+            title={`BlueSky @${config.bluesky}`}
             rel='noopener noreferrer'>
             <Icon icon='simple-icons:bluesky' />
           </a>
