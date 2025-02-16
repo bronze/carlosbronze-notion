@@ -208,9 +208,17 @@ blockquote {
 .heroheader {
   display: flex;
   place-items: center;
+  min-height: 30vh; /* Set a reasonable default minimum height */
+  transition: min-height 0.3s ease-in-out; /* Smooth transition for height changes */
 }
-.heroheader {
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+
+.heroheader .quotewrapper {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.heroheader.loaded .quotewrapper {
+  opacity: 1;
 }
 .index-page {
   padding: 0;

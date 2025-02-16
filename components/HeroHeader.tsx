@@ -61,6 +61,11 @@ const quotes = [
 ]
 
 export class HeroHeader extends Component<{ className?: string }> {
+  state = {
+    quote: '',
+    author: ''
+  }
+
   getRandomQuote() {
     return quotes[Math.floor(Math.random() * quotes.length)]
   }
@@ -68,7 +73,6 @@ export class HeroHeader extends Component<{ className?: string }> {
   adjustHeroHeader = () => {
     const header = document.querySelector('.notion-header') as HTMLElement
     const footer = document.querySelector('footer') as HTMLElement
-    const content = document.querySelector('.notion-page') as HTMLElement
     const heroHeader = document.querySelector('.heroheader') as HTMLElement
 
     if (!heroHeader) return
@@ -76,8 +80,7 @@ export class HeroHeader extends Component<{ className?: string }> {
     // Get heights of header and footer
     const headerHeight = header ? header.offsetHeight : 0
     const footerHeight = footer ? footer.offsetHeight : 0
-    const contentHeight = content ? content.offsetHeight : 0
-    console.log(headerHeight, footerHeight, contentHeight)
+
     // Calculate the new height
     const newHeight = window.innerHeight - (headerHeight + footerHeight + 200)
 
@@ -89,6 +92,14 @@ export class HeroHeader extends Component<{ className?: string }> {
     window.addEventListener('load', this.adjustHeroHeader)
     window.addEventListener('resize', this.adjustHeroHeader)
     this.adjustHeroHeader()
+
+    const { quote, author } = this.getRandomQuote()
+    this.setState({ quote, author }, () => {
+      const heroHeader = document.querySelector('.heroheader') as HTMLElement
+      if (heroHeader) {
+        heroHeader.classList.add('loaded')
+      }
+    })
   }
 
   componentDidUpdate() {
@@ -101,7 +112,7 @@ export class HeroHeader extends Component<{ className?: string }> {
   }
 
   render() {
-    const { quote, author } = this.getRandomQuote()
+    const { quote, author } = this.state
     return (
       <header
         className={
