@@ -205,3 +205,16 @@ blockquote {
 .notion-page {
   /* @apply container max-w-5xl mx-auto; */
 }
+.heroheader {
+  display: flex;
+  place-items: center;
+}
+.heroheader {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+.index-page {
+  padding: 0;
+  .notion-page-content {
+    display: none;
+  }
+}

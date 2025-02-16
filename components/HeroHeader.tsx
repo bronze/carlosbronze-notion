@@ -65,14 +65,48 @@ export class HeroHeader extends Component<{ className?: string }> {
     return quotes[Math.floor(Math.random() * quotes.length)]
   }
 
+  adjustHeroHeader = () => {
+    const header = document.querySelector('.notion-header') as HTMLElement
+    const footer = document.querySelector('footer') as HTMLElement
+    const content = document.querySelector('.notion-page') as HTMLElement
+    const heroHeader = document.querySelector('.heroheader') as HTMLElement
+
+    if (!heroHeader) return
+
+    // Get heights of header and footer
+    const headerHeight = header ? header.offsetHeight : 0
+    const footerHeight = footer ? footer.offsetHeight : 0
+    const contentHeight = content ? content.offsetHeight : 0
+    console.log(headerHeight, footerHeight, contentHeight)
+    // Calculate the new height
+    const newHeight = window.innerHeight - (headerHeight + footerHeight + 200)
+
+    // Apply the height to the hero header
+    heroHeader.style.minHeight = `${newHeight}px`
+  }
+
+  componentDidMount() {
+    window.addEventListener('load', this.adjustHeroHeader)
+    window.addEventListener('resize', this.adjustHeroHeader)
+    this.adjustHeroHeader()
+  }
+
+  componentDidUpdate() {
+    this.adjustHeroHeader()
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('load', this.adjustHeroHeader)
+    window.removeEventListener('resize', this.adjustHeroHeader)
+  }
+
   render() {
     const { quote, author } = this.getRandomQuote()
     return (
       <header
         className={
-          // pb-12 mb-12 notion-page notion-page-has-cover notion-page-has-icon notion-page-has-image-icon notion-full-page index-page
           this.props.className +
-          'container max-w-5xl mx-auto pt-24 pb-16 min-h-[250px] px-12'
+          ' heroheader container max-w-5xl mx-auto pt-24 pb-16 min-h-[250px] px-12'
         }>
         <div className='quotewrapper'>
           <blockquote>
@@ -80,7 +114,7 @@ export class HeroHeader extends Component<{ className?: string }> {
               {quote}
             </p>
           </blockquote>
-          <p className='text-lg mt-2  min-h-[30px]'>— {author}</p>
+          <p className='text-lg mt-2 min-h-[30px]'>— {author}</p>
         </div>
       </header>
     )
