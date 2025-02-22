@@ -216,12 +216,19 @@ blockquote {
     display: none;
   }
 }
-.notion-page .notion-page-content .notion-collection .notion-gallery {
-  .notion-gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+.notion-page .notion-page-content .notion-collection {
+  .notion-gallery {
+    .notion-gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    .notion-collection-card-cover {
+      height: unset;
+      aspect-ratio: 1 / 1;
+    }
   }
-  .notion-collection-card-cover {
-    height: unset;
-    aspect-ratio: 1 / 1;
+  &.notion-block-172a2395517b80af991de37f7a7be13b {
+    .notion-collection-card-cover {
+      aspect-ratio: 16 / 9;
+    }
   }
 }
