@@ -231,11 +231,24 @@ blockquote {
     .notion-collection-card-cover {
       aspect-ratio: 2 / 3;
     }
+    .notion-gallery-grid {
+      .notion-page-title {
+        width: 100%;
+        .notion-page-title-text {
+          font-size: 1.5em;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
   }
   &.notion-block-172a2395517b80af991de37f7a7be13b {
     /* VIDEO */
     .notion-collection-card-cover {
       aspect-ratio: 16 / 9;
+    }
+    .notion-gallery-grid .notion-page-title-text {
+      font-size: 1.2em;
     }
   }
 }
