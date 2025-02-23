@@ -230,7 +230,7 @@ export function NotionPage({
 
   const pageCover = React.useMemo(() => {
     if (isBioPage) {
-      return <HeroHeader className='heroheader ' />
+      return <HeroHeader className='heroheader min-h-[300px] ' />
     } else {
       return null
     }
