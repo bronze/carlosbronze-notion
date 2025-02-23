@@ -7,10 +7,13 @@ import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
-// import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
-// import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
+import { track } from '@vercel/analytics'
+import Link from 'next/link'
 import * as React from 'react'
 
+// import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
+// import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
+import { Button } from '@/components/ui/button'
 import * as config from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
@@ -91,50 +94,65 @@ export function FooterImpl() {
         )}
 
         {config.github && (
-          <a
-            className={styles.github}
-            href={`https://github.com/${config.github}`}
+          <Button
             title={`GitHub @${config.github}`}
-            rel='noopener noreferrer'>
-            <Icon icon='simple-icons:github' />
-          </a>
+            rel='noopener noreferrer'
+            onClick={() => {
+              track('social.github')
+            }}>
+            <Link href={`https://github.com/${config.github}`}>
+              <Icon icon='simple-icons:github' />
+            </Link>
+          </Button>
         )}
 
         {config.linkedin && (
-          <a
-            className={styles.linkedin}
-            href={`https://www.linkedin.com/in/${config.linkedin}`}
+          <Button
             title={`LinkedIn ${config.author}`}
-            rel='noopener noreferrer'>
-            <Icon icon='simple-icons:linkedin' />
-          </a>
+            rel='noopener noreferrer'
+            onClick={() => {
+              track('social.linkedin')
+            }}>
+            <Link href={`https://www.linkedin.com/in/${config.linkedin}`}>
+              <Icon icon='simple-icons:linkedin' />
+            </Link>
+          </Button>
         )}
         {config.bluesky && (
-          <a
-            className={styles.bluesky}
-            href={`https://bsky.app/profile/${config.bluesky}`}
+          <Button
             title={`BlueSky @${config.bluesky}`}
-            rel='noopener noreferrer'>
-            <Icon icon='simple-icons:bluesky' />
-          </a>
+            rel='noopener noreferrer'
+            onClick={() => {
+              track('social.bluesky')
+            }}>
+            <Link href={`https://bsky.app/profile/${config.bluesky}`}>
+              <Icon icon='simple-icons:bluesky' />
+            </Link>
+          </Button>
         )}
         {config.onlyfans && (
-          <a
-            className={styles.onlyfans}
-            href={`https://www.carlosbronze.com.br/onlyfans`}
+          <Button
             title={`OnlyFans ${config.author}`}
-            rel='noopener noreferrer'>
-            <Icon icon='simple-icons:onlyfans' />
-          </a>
+            rel='noopener noreferrer'
+            onClick={() => {
+              track('social.onlyfans')
+            }}>
+            <Link href={`https://www.carlosbronze.com.br/onlyfans`}>
+              <Icon icon='simple-icons:onlyfans' />
+            </Link>
+          </Button>
         )}
         {config.resume && (
-          <a
-            className={styles.resume}
-            href={`${config.resume}`}
+          <Button
             title={`Resume ${config.author}`}
-            rel='noopener noreferrer'>
-            <Icon icon='mdi:document' />
-          </a>
+            rel='noopener noreferrer'
+            onClick={() => {
+              track('social.resume')
+            }}>
+            <Link href={`${config.resume}`}>
+              <Icon icon='mdi:document' />
+            </Link>
+          </Button>
         )}
 
         {config.newsletter && (
