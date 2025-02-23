@@ -39,11 +39,11 @@ dependencies:
     specifier: ^4.0.6
     version: 4.0.6
   '@vercel/analytics':
-    specifier: ^1.4.1
-    version: 1.4.1(next@15.1.6)(react@18.3.1)
+    specifier: ^1.5.0
+    version: 1.5.0(next@15.1.6)(react@18.3.1)
   '@vercel/speed-insights':
-    specifier: ^1.1.0
-    version: 1.1.0(next@15.1.6)(react@18.3.1)
+    specifier: ^1.2.0
+    version: 1.2.0(next@15.1.6)(react@18.3.1)
   class-variance-authority:
     specifier: ^0.7.1
     version: 0.7.1
@@ -90,8 +90,8 @@ dependencies:
     specifier: ^8.5.2
     version: 8.5.2
   posthog-js:
-    specifier: ^1.181.0
-    version: 1.215.6
+    specifier: ^1.223.3
+    version: 1.223.3(@rrweb/types@2.0.0-alpha.17)
   prismjs:
     specifier: ^1.29.0
     version: 1.29.0
@@ -1251,6 +1251,12 @@ packages:
       react: 18.3.1
     dev: false
 
+  /@rrweb/types@2.0.0-alpha.17:
+    resolution: {integrity: sha512-AfDTVUuCyCaIG0lTSqYtrZqJX39ZEYzs4fYKnexhQ+id+kbZIpIJtaut5cto6dWZbB3SEe4fW0o90Po3LvTmfg==}
+    dependencies:
+      rrweb-snapshot: 2.0.0-alpha.18
+    dev: false
+
   /@rtsao/scc@1.1.0:
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
     dev: true
@@ -1570,8 +1576,8 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@vercel/analytics@1.4.1(next@15.1.6)(react@18.3.1):
-    resolution: {integrity: sha512-ekpL4ReX2TH3LnrRZTUKjHHNpNy9S1I7QmS+g/RQXoSUQ8ienzosuX7T9djZ/s8zPhBx1mpHP/Rw5875N+zQIQ==}
+  /@vercel/analytics@1.5.0(next@15.1.6)(react@18.3.1):
+    resolution: {integrity: sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==}
     peerDependencies:
       '@remix-run/react': ^2
       '@sveltejs/kit': ^1 || ^2
@@ -1600,8 +1606,8 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@vercel/speed-insights@1.1.0(next@15.1.6)(react@18.3.1):
-    resolution: {integrity: sha512-rAXxuhhO4mlRGC9noa5F7HLMtGg8YF1zAN6Pjd1Ny4pII4cerhtwSG4vympbCl+pWkH7nBS9kVXRD4FAn54dlg==}
+  /@vercel/speed-insights@1.2.0(next@15.1.6)(react@18.3.1):
+    resolution: {integrity: sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==}
     requiresBuild: true
     peerDependencies:
       '@sveltejs/kit': ^1 || ^2
@@ -4240,9 +4246,12 @@ packages:
       source-map-js: 1.2.1
     dev: false
 
-  /posthog-js@1.215.6:
-    resolution: {integrity: sha512-OWfLYXaGNZDfKnNo9h2jifV1rsqhSfZzHw6/W6IOSk8Cq2nidIPUm89mutk7zbzPPmnVTV8eqPCfhFaoHZZKLw==}
+  /posthog-js@1.223.3(@rrweb/types@2.0.0-alpha.17):
+    resolution: {integrity: sha512-ZQTc17M21IzkQmECJa2Xjont4tZrvIn252uGT3sTfmahTqZoW4j+kBj4eOJt9SNR6hOheFNkg7MSiI/rA6FaDA==}
+    peerDependencies:
+      '@rrweb/types': 2.0.0-alpha.17
     dependencies:
+      '@rrweb/types': 2.0.0-alpha.17
       core-js: 3.40.0
       fflate: 0.4.8
       preact: 10.25.4
@@ -4777,6 +4786,12 @@ packages:
     dependencies:
       glob: 7.2.3
     dev: true
+
+  /rrweb-snapshot@2.0.0-alpha.18:
+    resolution: {integrity: sha512-hBHZL/NfgQX6wO1D9mpwqFu1NJPpim+moIcKhFEjVTZVRUfCln+LOugRc4teVTCISYHN8Cw5e2iNTWCSm+SkoA==}
+    dependencies:
+      postcss: 8.5.2
+    dev: false
 
   /rss@1.2.2:
     resolution: {integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==}
