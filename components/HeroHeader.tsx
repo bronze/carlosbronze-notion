@@ -70,31 +70,31 @@ export class HeroHeader extends Component<{ className?: string }> {
     return quotes[Math.floor(Math.random() * quotes.length)]
   }
 
-  adjustHeroHeader = () => {
-    const header = document.querySelector('.notion-header') as HTMLElement
-    const footer = document.querySelector('footer') as HTMLElement
-    const content = document.querySelector('.notion-page') as HTMLElement
-    const heroHeader = document.querySelector('.heroheader') as HTMLElement
+  // adjustHeroHeader = () => {
+  //   const header = document.querySelector('.notion-header') as HTMLElement
+  //   const footer = document.querySelector('footer') as HTMLElement
+  //   const content = document.querySelector('.notion-page') as HTMLElement
+  //   const heroHeader = document.querySelector('.heroheader') as HTMLElement
 
-    if (!heroHeader) return
+  //   if (!heroHeader) return
 
-    // Get heights of header and footer
-    const headerHeight = header ? header.offsetHeight : 0
-    const footerHeight = footer ? footer.offsetHeight : 0
-    const contentHeight = content ? content.offsetHeight : 0
-    console.log(headerHeight, footerHeight, contentHeight)
+  //   // Get heights of header and footer
+  //   const headerHeight = header ? header.offsetHeight : 0
+  //   const footerHeight = footer ? footer.offsetHeight : 0
+  //   const contentHeight = content ? content.offsetHeight : 0
+  //   console.log(headerHeight, footerHeight, contentHeight)
 
-    // Calculate the new height
-    const newHeight = window.innerHeight - (headerHeight + footerHeight + 300)
+  //   // Calculate the new height
+  //   const newHeight = window.innerHeight - (headerHeight + footerHeight + 300)
 
-    // Apply the height to the hero header
-    heroHeader.style.minHeight = `${newHeight}px`
-  }
+  //   // Apply the height to the hero header
+  //   heroHeader.style.minHeight = `${newHeight}px`
+  // }
 
   componentDidMount() {
-    window.addEventListener('load', this.adjustHeroHeader)
-    window.addEventListener('resize', this.adjustHeroHeader)
-    this.adjustHeroHeader()
+    // window.addEventListener('load', this.adjustHeroHeader)
+    // window.addEventListener('resize', this.adjustHeroHeader)
+    // this.adjustHeroHeader()
 
     const { quote, author } = this.getRandomQuote()
     this.setState({ quote, author }, () => {
@@ -106,12 +106,12 @@ export class HeroHeader extends Component<{ className?: string }> {
   }
 
   componentDidUpdate() {
-    this.adjustHeroHeader()
+    // this.adjustHeroHeader()
   }
 
   componentWillUnmount() {
-    window.removeEventListener('load', this.adjustHeroHeader)
-    window.removeEventListener('resize', this.adjustHeroHeader)
+    // window.removeEventListener('load', this.adjustHeroHeader)
+    // window.removeEventListener('resize', this.adjustHeroHeader)
   }
 
   render() {
@@ -119,7 +119,7 @@ export class HeroHeader extends Component<{ className?: string }> {
     return (
       <header
         className={
-          this.props.className + ' heroheader container max-w-5xl mx-auto'
+          this.props.className + ' heroheader container max-w-5xl mx-auto px-12'
         }>
         <div className='quotewrapper'>
           <blockquote>
