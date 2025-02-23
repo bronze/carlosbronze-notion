@@ -230,7 +230,7 @@ export function NotionPage({
 
   const pageCover = React.useMemo(() => {
     if (isBioPage) {
-      return <HeroHeader className='heroheader min-h-[300px] ' />
+      return <HeroHeader className='heroheader ' />
     } else {
       return null
     }
@@ -328,7 +328,7 @@ export function NotionPage({
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
         footer={footer}
-        pageCover={pageCover}
+        pageFooter={pageCover}
       />
       {/* VERCEL STUFF */}
       <Analytics />

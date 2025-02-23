@@ -61,6 +61,11 @@ const quotes = [
 ]
 
 export class HeroHeader extends Component<{ className?: string }> {
+  state = {
+    quote: '',
+    author: ''
+  }
+
   getRandomQuote() {
     return quotes[Math.floor(Math.random() * quotes.length)]
   }
@@ -78,8 +83,9 @@ export class HeroHeader extends Component<{ className?: string }> {
     const footerHeight = footer ? footer.offsetHeight : 0
     const contentHeight = content ? content.offsetHeight : 0
     console.log(headerHeight, footerHeight, contentHeight)
+
     // Calculate the new height
-    const newHeight = window.innerHeight - (headerHeight + footerHeight + 200)
+    const newHeight = window.innerHeight - (headerHeight + footerHeight + 300)
 
     // Apply the height to the hero header
     heroHeader.style.minHeight = `${newHeight}px`
@@ -89,6 +95,14 @@ export class HeroHeader extends Component<{ className?: string }> {
     window.addEventListener('load', this.adjustHeroHeader)
     window.addEventListener('resize', this.adjustHeroHeader)
     this.adjustHeroHeader()
+
+    const { quote, author } = this.getRandomQuote()
+    this.setState({ quote, author }, () => {
+      const heroHeader = document.querySelector('.heroheader') as HTMLElement
+      if (heroHeader) {
+        heroHeader.classList.add('loaded')
+      }
+    })
   }
 
   componentDidUpdate() {
@@ -101,12 +115,11 @@ export class HeroHeader extends Component<{ className?: string }> {
   }
 
   render() {
-    const { quote, author } = this.getRandomQuote()
+    const { quote, author } = this.state
     return (
       <header
         className={
-          this.props.className +
-          ' heroheader container max-w-5xl mx-auto pb-16 pt-24'
+          this.props.className + ' heroheader container max-w-5xl mx-auto '
         }>
         <div className='quotewrapper'>
           <blockquote>
