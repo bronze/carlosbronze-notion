@@ -39,13 +39,15 @@ export function FooterImpl() {
   }, [])
 
   return (
-    <footer className={`${styles.footer} footerlinks`}>
+    <footer
+      className={`footerlinks container max-w-5xl mx-auto flex flex-col md:grid md:grid-cols-3 place-items-center pb-4 max-md:gap-4`}>
       {/* px-4 py-2 w-full flex md:flex-row justify-between items-center flex-col */}
-      <div className={styles.copyright}>
+      <div
+        className={`${styles.copyright} copyright justify-self-start order-3 md:order-1`}>
         Copyright {currentYear} {config.author}
       </div>
 
-      <div className={styles.settings}>
+      <div className={`${styles.settings} settings  order-1  md:order-2`}>
         {hasMounted && (
           <a
             className={styles.toggleDarkMode}
@@ -62,7 +64,8 @@ export function FooterImpl() {
         )}
       </div>
 
-      <div className={styles.social}>
+      <div
+        className={`${styles.social} w-[50%] md:w-full place-content-between gap-1 social grid place-items-center grid-cols-5 order-2 md:order-3`}>
         {config.twitter && (
           <a
             className={styles.twitter}
@@ -95,6 +98,7 @@ export function FooterImpl() {
 
         {config.github && (
           <Button
+            asChild
             title={`GitHub @${config.github}`}
             rel='noopener noreferrer'
             onClick={() => {
@@ -108,6 +112,7 @@ export function FooterImpl() {
 
         {config.linkedin && (
           <Button
+            asChild
             title={`LinkedIn ${config.author}`}
             rel='noopener noreferrer'
             onClick={() => {
@@ -120,6 +125,7 @@ export function FooterImpl() {
         )}
         {config.bluesky && (
           <Button
+            asChild
             title={`BlueSky @${config.bluesky}`}
             rel='noopener noreferrer'
             onClick={() => {
@@ -132,6 +138,7 @@ export function FooterImpl() {
         )}
         {config.onlyfans && (
           <Button
+            asChild
             title={`OnlyFans ${config.author}`}
             rel='noopener noreferrer'
             onClick={() => {
@@ -144,6 +151,7 @@ export function FooterImpl() {
         )}
         {config.resume && (
           <Button
+            asChild
             title={`Resume ${config.author}`}
             rel='noopener noreferrer'
             onClick={() => {

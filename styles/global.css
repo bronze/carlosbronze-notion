@@ -252,3 +252,12 @@ blockquote {
     }
   }
 }
+.footerlinks {
+  .copyright {
+  }
+  .settings {
+  }
+  .social a {
+    @apply p-0 !shadow-none inset-shadow-none ring-0 inset-ring-0;
+  }
+}
