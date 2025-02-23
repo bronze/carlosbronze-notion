@@ -119,7 +119,7 @@ export class HeroHeader extends Component<{ className?: string }> {
     return (
       <header
         className={
-          this.props.className + ' heroheader container max-w-5xl mx-auto '
+          this.props.className + ' heroheader container max-w-5xl mx-auto'
         }>
         <div className='quotewrapper'>
           <blockquote>
