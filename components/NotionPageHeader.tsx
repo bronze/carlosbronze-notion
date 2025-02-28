@@ -1,7 +1,5 @@
 import type * as types from 'notion-types'
-import { IoMenu } from '@react-icons/all-files/io5/IoMenu'
-import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
-import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
+import { Icon } from '@iconify/react'
 import * as React from 'react'
 import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
 
@@ -40,9 +38,9 @@ function ToggleThemeButton() {
             title='Dark Mode Toggle'
             className='p-3 cursor-pointer button rounded-[3px] hover:bg-(--bg-color-0)'>
             {hasMounted && isDarkMode ? (
-              <IoMoonSharp className='text-base ' />
+              <Icon icon='ph:moon-fill' className='text-base' />
             ) : (
-              <IoSunnyOutline className='text-base' />
+              <Icon icon='ph:sun-fill' className='text-base' />
             )}
           </Button>
         </TooltipTrigger>
@@ -115,7 +113,7 @@ export function NotionPageHeader({
           <Drawer>
             <DrawerTrigger asChild>
               <Button variant='ghost' size='icon'>
-                <IoMenu className='text-xl' />
+                <Icon icon='ph:list-bold' className='text-lg' />
               </Button>
             </DrawerTrigger>
             <DrawerContent className='p-6 bg-(--bg-color) text-(--fg-color) border-1 !border-(--border)'>

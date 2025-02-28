@@ -1,12 +1,10 @@
 import { Icon } from '@iconify/react'
 // import {SiBluesky, SiGithub, SiOnlyfans} from '@icons-pack/react-simple-icons';
-import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
 // import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 // import {FaLinkedin} from '@react-icons/all-files/fa/FaLinkedin'
-import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
-import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
-import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
-import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
+// import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
+// import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
+// import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { track } from '@vercel/analytics'
 import Link from 'next/link'
 import * as React from 'react'
@@ -66,7 +64,7 @@ export function FooterImpl() {
 
       <div
         className={`${styles.social} w-[50%] md:w-full place-content-between gap-1 social grid place-items-center grid-cols-5 order-2 md:order-3`}>
-        {config.twitter && (
+        {/* {config.twitter && (
           <a
             className={styles.twitter}
             href={`https://twitter.com/${config.twitter}`}
@@ -94,7 +92,7 @@ export function FooterImpl() {
             rel='noopener noreferrer'>
             <FaZhihu />
           </a>
-        )}
+        )} */}
 
         {config.github && (
           <Button
@@ -109,7 +107,6 @@ export function FooterImpl() {
             </Link>
           </Button>
         )}
-
         {config.linkedin && (
           <Button
             asChild
@@ -162,14 +159,13 @@ export function FooterImpl() {
             </Link>
           </Button>
         )}
-
         {config.newsletter && (
           <a
             className={styles.newsletter}
             href={`${config.newsletter}`}
             title={`Newsletter ${config.author}`}
             rel='noopener noreferrer'>
-            <FaEnvelopeOpenText />
+            <Icon icon='fa6-regular:envelope-open' />
           </a>
         )}
 
@@ -179,7 +175,7 @@ export function FooterImpl() {
             href={`https://www.youtube.com/${config.youtube}`}
             title={`YouTube ${config.author}`}
             rel='noopener noreferrer'>
-            <FaYoutube />
+            <Icon icon='fa6-brands:youtube' />
           </a>
         )}
       </div>
