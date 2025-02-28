@@ -184,6 +184,8 @@ blockquote {
   @apply px-4 py-2 w-full flex flex-row justify-between items-center;
 }
 .notion-header {
+  backdrop-filter: blur(20px) !important;
+  box-shadow: unset !important;
   .notion-search-button {
     height: 44px;
     width: 44px;
