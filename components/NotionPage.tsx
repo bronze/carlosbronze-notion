@@ -309,7 +309,8 @@ export function NotionPage({
         bodyClassName={cs(
           styles.notion,
           pageId === site.rootNotionPageId && 'index-page',
-          isRootPage && 'root-page'
+          isRootPage && 'root-page',
+          'collection-' + collectionId
         )}
         darkMode={isDarkMode}
         components={components}

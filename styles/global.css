@@ -218,39 +218,46 @@ blockquote {
     display: none;
   }
 }
-.notion-page .notion-page-content .notion-collection {
-  .notion-gallery {
-    .notion-gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    }
-    .notion-collection-card-cover {
-      height: unset;
-      aspect-ratio: 1 / 1;
+.notion-page {
+  &.collection-9a54f131-4cca-4b45-a8cd-fe97f48448c8 {
+    .notion-property-file img {
+      min-height: 300px;
     }
   }
-  &.notion-block-126a2395517b806a8b4cf8be571353c4 {
-    /* LIVRO */
-    .notion-collection-card-cover {
-      aspect-ratio: 2 / 3;
+  .notion-page-content .notion-collection {
+    .notion-gallery {
+      .notion-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      }
+      .notion-collection-card-cover {
+        height: unset;
+        aspect-ratio: 1 / 1;
+      }
     }
-    .notion-gallery-grid {
-      .notion-page-title {
-        width: 100%;
-        .notion-page-title-text {
-          font-size: 1.5em;
-          text-align: center;
+    &.notion-block-126a2395517b806a8b4cf8be571353c4 {
+      /* LIVRO */
+      .notion-collection-card-cover {
+        aspect-ratio: 2 / 3;
+      }
+      .notion-gallery-grid {
+        .notion-page-title {
           width: 100%;
+          .notion-page-title-text {
+            font-size: 1.5em;
+            text-align: center;
+            width: 100%;
+          }
         }
       }
     }
-  }
-  &.notion-block-172a2395517b80af991de37f7a7be13b {
-    /* VIDEO */
-    .notion-collection-card-cover {
-      aspect-ratio: 16 / 9;
-    }
-    .notion-gallery-grid .notion-page-title-text {
-      font-size: 1.2em;
+    &.notion-block-172a2395517b80af991de37f7a7be13b {
+      /* VIDEO */
+      .notion-collection-card-cover {
+        aspect-ratio: 16 / 9;
+      }
+      .notion-gallery-grid .notion-page-title-text {
+        font-size: 1.2em;
+      }
     }
   }
 }
