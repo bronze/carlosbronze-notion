@@ -64,10 +64,10 @@ export default siteConfig({
     {
       title: 'Sobre',
       pageId: '172a2395517b8015ab5cd9242bfc7586'
-    },
-    {
-      title: 'Contato',
-      pageId: '195a2395517b8065be5ce1c8bfad2eaa'
     }
+    // {
+    //   title: 'Contato',
+    //   pageId: '195a2395517b8065be5ce1c8bfad2eaa'
+    // }
   ]
 })
