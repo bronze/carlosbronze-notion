@@ -21,6 +21,7 @@ import posthog from 'posthog-js'
 import * as React from 'react'
 
 import { bootstrap } from '@/lib/bootstrap-client'
+import { cbconsole } from '@/lib/bootstrap-console'
 import {
   amplitudeConfig,
   amplitudeId,
@@ -34,6 +35,7 @@ import {
 if (!isServer) {
   bootstrap()
 }
+cbconsole()
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
