@@ -5,7 +5,7 @@
   "useTabs": false,
   "tabWidth": 2,
   "bracketSpacing": true,
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "arrowParens": "always",
   "trailingComma": "none"
 }

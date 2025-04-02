@@ -38,10 +38,12 @@ export function FooterImpl() {
 
   return (
     <footer
-      className={`footerlinks container max-w-5xl mx-auto flex flex-col md:grid md:grid-cols-3 place-items-center pb-4 max-md:gap-4`}>
+      className={`footerlinks container max-w-5xl mx-auto flex flex-col md:grid md:grid-cols-3 place-items-center pb-4 max-md:gap-4`}
+    >
       {/* px-4 py-2 w-full flex md:flex-row justify-between items-center flex-col */}
       <div
-        className={`${styles.copyright} copyright justify-self-start order-3 md:order-1`}>
+        className={`${styles.copyright} copyright justify-self-start order-3 md:order-1`}
+      >
         Copyright {currentYear} {config.author}
       </div>
 
@@ -52,7 +54,8 @@ export function FooterImpl() {
             href='#'
             role='button'
             onClick={onToggleDarkMode}
-            title='Dark Mode Toggle'>
+            title='Dark Mode Toggle'
+          >
             {isDarkMode ? (
               <Icon icon='mdi:theme-light-dark' />
             ) : (
@@ -63,7 +66,8 @@ export function FooterImpl() {
       </div>
 
       <div
-        className={`${styles.social} w-[50%] md:w-full place-content-between gap-1 social grid place-items-center grid-cols-5 order-2 md:order-3`}>
+        className={`${styles.social} w-[50%] md:w-full place-content-between gap-1 social grid place-items-center grid-cols-5 order-2 md:order-3`}
+      >
         {/* {config.twitter && (
           <a
             className={styles.twitter}
@@ -101,7 +105,8 @@ export function FooterImpl() {
             rel='noopener noreferrer'
             onClick={() => {
               track('social.github')
-            }}>
+            }}
+          >
             <Link href={`https://github.com/${config.github}`}>
               <Icon icon='simple-icons:github' />
             </Link>
@@ -114,7 +119,8 @@ export function FooterImpl() {
             rel='noopener noreferrer'
             onClick={() => {
               track('social.linkedin')
-            }}>
+            }}
+          >
             <Link href={`https://www.linkedin.com/in/${config.linkedin}`}>
               <Icon icon='simple-icons:linkedin' />
             </Link>
@@ -127,7 +133,8 @@ export function FooterImpl() {
             rel='noopener noreferrer'
             onClick={() => {
               track('social.bluesky')
-            }}>
+            }}
+          >
             <Link href={`https://bsky.app/profile/${config.bluesky}`}>
               <Icon icon='simple-icons:bluesky' />
             </Link>
@@ -140,7 +147,8 @@ export function FooterImpl() {
             rel='noopener noreferrer'
             onClick={() => {
               track('social.onlyfans')
-            }}>
+            }}
+          >
             <Link href={`https://www.carlosbronze.com.br/onlyfans`}>
               <Icon icon='simple-icons:onlyfans' />
             </Link>
@@ -153,7 +161,8 @@ export function FooterImpl() {
             rel='noopener noreferrer'
             onClick={() => {
               track('social.resume')
-            }}>
+            }}
+          >
             <Link href={`${config.resume}`}>
               <Icon icon='mdi:document' />
             </Link>
@@ -164,7 +173,8 @@ export function FooterImpl() {
             className={styles.newsletter}
             href={`${config.newsletter}`}
             title={`Newsletter ${config.author}`}
-            rel='noopener noreferrer'>
+            rel='noopener noreferrer'
+          >
             <Icon icon='fa6-regular:envelope-open' />
           </a>
         )}
@@ -174,7 +184,8 @@ export function FooterImpl() {
             className={styles.youtube}
             href={`https://www.youtube.com/${config.youtube}`}
             title={`YouTube ${config.author}`}
-            rel='noopener noreferrer'>
+            rel='noopener noreferrer'
+          >
             <Icon icon='fa6-brands:youtube' />
           </a>
         )}

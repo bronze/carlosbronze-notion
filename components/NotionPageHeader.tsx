@@ -36,7 +36,8 @@ function ToggleThemeButton() {
             size='icon'
             onClick={toggleDarkMode}
             title='Dark Mode Toggle'
-            className='p-3 cursor-pointer button rounded-[3px] hover:bg-(--bg-color-0)'>
+            className='p-3 cursor-pointer button rounded-[3px] hover:bg-(--bg-color-0)'
+          >
             {hasMounted && isDarkMode ? (
               <Icon icon='ph:moon-fill' className='text-base' />
             ) : (
@@ -74,7 +75,8 @@ export function NotionPageHeader({
                   <components.PageLink
                     href={mapPageUrl(link.pageId)}
                     title={link.title}
-                    className='breadcrumb button text-sm font-medium text-muted-foreground hover:text-primary'>
+                    className='breadcrumb button text-sm font-medium text-muted-foreground hover:text-primary'
+                  >
                     {link.title}
                   </components.PageLink>
                 </NavigationMenuLink>
@@ -82,7 +84,8 @@ export function NotionPageHeader({
                 <NavigationMenuLink asChild>
                   <components.Link
                     href={link.url}
-                    className='text-sm font-medium text-muted-foreground hover:text-primary'>
+                    className='text-sm font-medium text-muted-foreground hover:text-primary'
+                  >
                     {link.title}
                   </components.Link>
                 </NavigationMenuLink>

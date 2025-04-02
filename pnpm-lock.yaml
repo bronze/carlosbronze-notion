@@ -87,8 +87,8 @@ dependencies:
     specifier: ^7.1.1
     version: 7.1.1
   postcss:
-    specifier: ^8.5.2
-    version: 8.5.2
+    specifier: ^8.5.3
+    version: 8.5.3
   posthog-js:
     specifier: ^1.223.3
     version: 1.223.3(@rrweb/types@2.0.0-alpha.17)
@@ -108,8 +108,8 @@ dependencies:
     specifier: ^7.2.6
     version: 7.2.6(@babel/runtime@7.26.7)(@types/react@18.3.18)(react-dom@18.3.1)(react@18.3.1)
   react-tweet:
-    specifier: ^3.2.1
-    version: 3.2.1(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^3.2.2
+    version: 3.2.2(react-dom@18.3.1)(react@18.3.1)
   react-use:
     specifier: ^17.4.2
     version: 17.6.0(react-dom@18.3.1)(react@18.3.1)
@@ -131,8 +131,8 @@ devDependencies:
     specifier: ^1.4.0
     version: 1.4.0(eslint@8.57.1)(typescript@5.7.3)
   '@iconify/react':
-    specifier: ^5.2.0
-    version: 5.2.0(react@18.3.1)
+    specifier: ^5.2.1
+    version: 5.2.1(react@18.3.1)
   '@next/bundle-analyzer':
     specifier: ^15.0.2
     version: 15.1.6
@@ -152,11 +152,11 @@ devDependencies:
     specifier: ^7.0.1
     version: 7.0.2
   prettier:
-    specifier: ^3.5.0
-    version: 3.5.0
+    specifier: ^3.5.3
+    version: 3.5.3
   prettier-plugin-tailwindcss:
     specifier: ^0.6.11
-    version: 0.6.11(prettier@3.5.0)
+    version: 0.6.11(prettier@3.5.3)
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@4.0.6)
@@ -423,8 +423,8 @@ packages:
     deprecated: Use @eslint/object-schema instead
     dev: true
 
-  /@iconify/react@5.2.0(react@18.3.1):
-    resolution: {integrity: sha512-7Sdjrqq3fkkQNks9SY3adGC37NQTHsBJL2PRKlQd455PoDi9s+Es9AUTY+vGLFOYs5yO9w9yCE42pmxCwG26WA==}
+  /@iconify/react@5.2.1(react@18.3.1):
+    resolution: {integrity: sha512-37GDR3fYDZmnmUn9RagyaX+zca24jfVOMY8E1IXTqJuE8pxNtN51KWPQe3VODOWvuUurq7q9uUu3CFrpqj5Iqg==}
     peerDependencies:
       react: '>=16'
     dependencies:
@@ -1406,7 +1406,7 @@ packages:
       '@tailwindcss/node': 4.0.6
       '@tailwindcss/oxide': 4.0.6
       lightningcss: 1.29.1
-      postcss: 8.5.2
+      postcss: 8.5.3
       tailwindcss: 4.0.6
     dev: false
 
@@ -4237,8 +4237,8 @@ packages:
       source-map-js: 1.2.1
     dev: false
 
-  /postcss@8.5.2:
-    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
+  /postcss@8.5.3:
+    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.8
@@ -4288,7 +4288,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.6.11(prettier@3.5.0):
+  /prettier-plugin-tailwindcss@0.6.11(prettier@3.5.3):
     resolution: {integrity: sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -4343,11 +4343,11 @@ packages:
       prettier-plugin-svelte:
         optional: true
     dependencies:
-      prettier: 3.5.0
+      prettier: 3.5.3
     dev: true
 
-  /prettier@3.5.0:
-    resolution: {integrity: sha512-quyMrVt6svPS7CjQ9gKb3GLEX/rl3BCL2oa/QkNcXv4YNVBC9olt3s+H7ukto06q7B1Qz46PbrKLO34PR6vXcA==}
+  /prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -4593,11 +4593,11 @@ packages:
       tslib: 2.8.1
     dev: false
 
-  /react-tweet@3.2.1(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-dktP3RMuwRB4pnSDocKpSsW5Hq1IXRW6fONkHhxT5EBIXsKZzdQuI70qtub1XN2dtZdkJWWxfBm/Q+kN+vRYFA==}
+  /react-tweet@3.2.2(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-hIkxAVPpN2RqWoDEbo3TTnN/pDcp9/Jb6pTgiA4EbXa9S+m2vHIvvZKHR+eS0PDIsYqe+zTmANRa5k6+/iwGog==}
     peerDependencies:
-      react: '>= 18.0.0'
-      react-dom: '>= 18.0.0'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
     dependencies:
       '@swc/helpers': 0.5.15
       clsx: 2.1.1
@@ -4790,7 +4790,7 @@ packages:
   /rrweb-snapshot@2.0.0-alpha.18:
     resolution: {integrity: sha512-hBHZL/NfgQX6wO1D9mpwqFu1NJPpim+moIcKhFEjVTZVRUfCln+LOugRc4teVTCISYHN8Cw5e2iNTWCSm+SkoA==}
     dependencies:
-      postcss: 8.5.2
+      postcss: 8.5.3
     dev: false
 
   /rss@1.2.2:
