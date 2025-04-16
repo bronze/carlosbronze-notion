@@ -149,7 +149,7 @@ export function FooterImpl() {
               track('social.onlyfans')
             }}
           >
-            <Link href={`https://www.carlosbronze.com.br/onlyfans`}>
+            <Link href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>
               <Icon icon='simple-icons:onlyfans' />
             </Link>
           </Button>
