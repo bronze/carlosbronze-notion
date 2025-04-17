@@ -272,3 +272,20 @@ blockquote {
     @apply p-0 !shadow-none inset-shadow-none ring-0 inset-ring-0;
   }
 }
+
+.dark-mode .notion-blue_background,
+.dark-mode .notion-brown_background,
+.dark-mode .notion-gray_background,
+.dark-mode .notion-orange_background,
+.dark-mode .notion-pink_background,
+.dark-mode .notion-purple_background,
+.dark-mode .notion-red_background,
+.dark-mode .notion-teal_background,
+.dark-mode .notion-yellow_background {
+  padding: 3px;
+}
+
+.dark-mode .notion-yellow_background {
+  background: #56432a !important;
+  padding: 3px;
+}
