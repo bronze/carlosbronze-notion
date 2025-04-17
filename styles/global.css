@@ -227,6 +227,7 @@ blockquote {
   .notion-page-content .notion-collection {
     .notion-gallery {
       .notion-gallery-grid {
+        grid-auto-rows: max-content;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       }
       .notion-collection-card-cover {
