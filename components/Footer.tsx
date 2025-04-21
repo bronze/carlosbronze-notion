@@ -103,6 +103,7 @@ export function FooterImpl() {
             asChild
             title={`GitHub @${config.github}`}
             rel='noopener noreferrer'
+            data-ph-capture-attribute-footer-links='github'
             onClick={() => {
               track('social.github')
             }}
@@ -117,6 +118,7 @@ export function FooterImpl() {
             asChild
             title={`LinkedIn ${config.author}`}
             rel='noopener noreferrer'
+            data-ph-capture-attribute-footer-links='linkedin'
             onClick={() => {
               track('social.linkedin')
             }}
@@ -131,6 +133,7 @@ export function FooterImpl() {
             asChild
             title={`BlueSky @${config.bluesky}`}
             rel='noopener noreferrer'
+            data-ph-capture-attribute-footer-links='bluesky'
             onClick={() => {
               track('social.bluesky')
             }}
@@ -145,6 +148,7 @@ export function FooterImpl() {
             asChild
             title={`OnlyFans ${config.author}`}
             rel='noopener noreferrer'
+            data-ph-capture-attribute-footer-links='onlyfans'
             onClick={() => {
               track('social.onlyfans')
             }}
@@ -159,6 +163,7 @@ export function FooterImpl() {
             asChild
             title={`Resume ${config.author}`}
             rel='noopener noreferrer'
+            data-ph-capture-attribute-footer-links='resume'
             onClick={() => {
               track('social.resume')
             }}
