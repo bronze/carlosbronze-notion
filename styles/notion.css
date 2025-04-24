@@ -176,7 +176,7 @@
 }
 
 .notion-collection-page-properties .notion-collection-column-title {
-  display: none;
+  /* display: none; */
 }
 
 .notion-collection-row-property .notion-property {
