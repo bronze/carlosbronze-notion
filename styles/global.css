@@ -219,6 +219,14 @@ blockquote {
   }
 }
 .notion-page {
+  &.collection-b625732d-c414-40b8-b3b6-90b6142445ff {
+    .notion-property-checkbox {
+      display: none;
+    }
+    .notion-property-file img {
+      max-height: 300px;
+    }
+  }
   &.collection-9a54f131-4cca-4b45-a8cd-fe97f48448c8 {
     .notion-property-file img {
       min-height: 300px;
