@@ -1,3 +1,5 @@
+import * as amplitude from '@amplitude/analytics-browser'
+import posthog from 'posthog-js'
 import React, { useEffect, useState } from 'react'
 
 function BronzePage() {
@@ -10,10 +12,10 @@ function BronzePage() {
       console.log('Sending user ID:', userId)
 
       // PostHog integration
-      if (window.posthog) {
+      if (typeof window !== 'undefined' && userId) {
         // console.log('PostHog object:', window.posthog)
         console.log('Identifying in PostHog with userId:', userId)
-        window.posthog.identify(userId, {
+        posthog.identify(userId, {
           // Additional properties can be sent here
         })
       } else {
@@ -21,9 +23,9 @@ function BronzePage() {
       }
 
       // Amplitude integration
-      if (window.amplitude) {
+      if (typeof window !== 'undefined' && userId) {
         console.log('Identifying in Amplitude with userId:', userId)
-        window.amplitude.setUserId(userId)
+        amplitude.setUserId(userId)
       } else {
         console.warn('Amplitude is not loaded or undefined.')
       }
