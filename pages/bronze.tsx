@@ -5,25 +5,27 @@ function BronzePage() {
 
   // Function to send user ID to analytics platforms
   const sendUserId = () => {
+    console.log('sendUserId function called with userId:', userId)
     if (userId) {
       console.log('Sending user ID:', userId)
 
       // PostHog integration
       if (window.posthog) {
-        console.log('Identifying in PostHog')
+        console.log('PostHog object:', window.posthog)
+        console.log('Identifying in PostHog with userId:', userId)
         window.posthog.identify(userId, {
           // Additional properties can be sent here
         })
       } else {
-        console.warn('PostHog is not loaded.')
+        console.warn('PostHog is not loaded or undefined.')
       }
 
       // Amplitude integration
       if (window.amplitude) {
-        console.log('Identifying in Amplitude')
+        console.log('Identifying in Amplitude with userId:', userId)
         window.amplitude.setUserId(userId)
       } else {
-        console.warn('Amplitude is not loaded.')
+        console.warn('Amplitude is not loaded or undefined.')
       }
     } else {
       console.log('No user ID found.')

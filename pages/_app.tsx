@@ -57,9 +57,18 @@ export default function App({ Component, pageProps }: AppProps) {
 
     if (posthogId) {
       posthog.init(posthogId, posthogConfig)
+      // Attach posthog to the window object for global access
+      if (typeof window !== 'undefined') {
+        window.posthog = posthog
+      }
     }
+
     if (amplitudeId) {
       amplitude.init(amplitudeId, amplitudeConfig)
+      // Attach posthog to the window object for global access
+      if (typeof window !== 'undefined') {
+        window.amplitude = amplitude
+      }
     }
 
     router.events.on('routeChangeComplete', onRouteChangeComplete)
