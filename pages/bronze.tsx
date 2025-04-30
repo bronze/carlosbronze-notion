@@ -21,7 +21,7 @@ function BronzePage() {
       // Amplitude integration
       if (window.amplitude) {
         console.log('Identifying in Amplitude')
-        window.amplitude.getInstance().setUserId(userId)
+        window.amplitude.setUserId(userId)
       } else {
         console.warn('Amplitude is not loaded.')
       }
