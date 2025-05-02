@@ -273,6 +273,11 @@ blockquote {
   }
   &.collection-edef92ce-0a6f-41e7-b882-2c54bb0a94ad {
     /* Videos */
+    .notion-collection-row-body {
+      .notion-property-file img {
+        min-height: 300px;
+      }
+    }
     .notion-page-content .notion-collection {
       .notion-gallery {
         .notion-collection-card-cover {
@@ -303,10 +308,20 @@ blockquote {
         min-height: 300px;
       }
     }
-    .notion-gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
-      .notion-page-title-text {
-        font-size: 1.6em;
+    .notion-page-content .notion-collection {
+      .notion-gallery {
+        .notion-collection-card-cover {
+          aspect-ratio: 16 / 9;
+        }
+        .notion-gallery-grid {
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(130px, 1fr)
+          ) !important;
+          .notion-page-title-text {
+            font-size: 1.6em;
+          }
+        }
       }
     }
     .notion-table {
