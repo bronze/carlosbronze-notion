@@ -219,7 +219,17 @@ blockquote {
   }
 }
 .notion-page {
+  &.collection-1e7a2395-517b-809e-9578-000bb584eeff {
+    /*  Stack */
+    .notion-gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+      .notion-page-title-text {
+        font-size: 1.6em;
+      }
+    }
+  }
   &.collection-b625732d-c414-40b8-b3b6-90b6142445ff {
+    /* Pessoas */
     .notion-property-checkbox {
       display: none;
     }
@@ -228,9 +238,13 @@ blockquote {
     }
   }
   &.collection-9a54f131-4cca-4b45-a8cd-fe97f48448c8 {
+    /* Livros */
     .notion-property-file img {
       min-height: 300px;
     }
+  }
+  &.collection-edef92ce-0a6f-41e7-b882-2c54bb0a94ad {
+    /* Videos */
   }
   .notion-page-content .notion-collection {
     .notion-gallery {
