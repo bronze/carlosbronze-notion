@@ -304,6 +304,12 @@ blockquote {
     .notion-table {
       overflow: hidden;
     }
+    .notion-block-1e7a2395517b804a9451de634a9a0b50 {
+      details:last-of-type {
+        /* your styles here */
+        display: none;
+      }
+    }
   }
 }
 .footerlinks {
