@@ -281,6 +281,18 @@ blockquote {
       }
     }
   }
+  &.collection-1b3a2395-517b-80e2-b69c-000b5641bd7b {
+    /* Artigos */
+    .notion-table {
+      overflow: hidden;
+    }
+  }
+  &.collection-c4f5056d-3497-4697-a0e5-a5f6b0b1399f {
+    /* Templates */
+    .notion-table {
+      overflow: hidden;
+    }
+  }
   &.collection-1e7a2395-517b-809e-9578-000bb584eeff {
     /*  Stack */
     .notion-gallery-grid {
