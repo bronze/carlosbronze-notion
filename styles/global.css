@@ -227,6 +227,9 @@ blockquote {
         font-size: 1.6em;
       }
     }
+    .notion-table {
+      overflow: hidden;
+    }
   }
   &.collection-b625732d-c414-40b8-b3b6-90b6142445ff {
     /* Pessoas */
