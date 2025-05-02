@@ -237,8 +237,10 @@ blockquote {
     .notion-property-checkbox {
       display: none;
     }
-    .notion-property-file img {
-      max-height: 300px;
+    .notion-collection-row-body {
+      .notion-property-file img {
+        min-height: 300px;
+      }
     }
     .notion-table {
       overflow: hidden;
@@ -246,12 +248,13 @@ blockquote {
   }
   &.collection-9a54f131-4cca-4b45-a8cd-fe97f48448c8 {
     /* Livros */
-
+    .notion-collection-row-body {
+      .notion-property-file img {
+        min-height: 300px;
+      }
+    }
     .notion-page-content .notion-collection {
       .notion-gallery {
-        .notion-property-file img {
-          min-height: 300px;
-        }
         .notion-collection-card-cover {
           aspect-ratio: 2 / 3;
         }
@@ -295,6 +298,11 @@ blockquote {
   }
   &.collection-1e7a2395-517b-809e-9578-000bb584eeff {
     /*  Stack */
+    .notion-collection-row-body {
+      .notion-property-file img {
+        min-height: 300px;
+      }
+    }
     .notion-gallery-grid {
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
       .notion-page-title-text {
