@@ -294,6 +294,12 @@ blockquote {
     .notion-table {
       overflow: hidden;
     }
+    .notion-block-1b3a2395517b80a09e76d6d4d3d02da9 {
+      details:last-of-type {
+        /* your styles here */
+        display: none;
+      }
+    }
   }
   &.collection-c4f5056d-3497-4697-a0e5-a5f6b0b1399f {
     /* Templates */
@@ -333,6 +339,9 @@ blockquote {
         display: none;
       }
     }
+  }
+  .notion-page-title .notion-page-icon-inline {
+    flex-shrink: 0;
   }
 }
 .footerlinks {
