@@ -235,7 +235,7 @@ blockquote {
   &.collection-b625732d-c414-40b8-b3b6-90b6142445ff {
     /* Pessoas */
     .notion-property-checkbox {
-      display: none;
+      /* display: none; */
     }
     .notion-collection-row-body {
       .notion-property-file img {
