@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
+            <meta httpEquiv='X-Clacks-Overhead' content='GNU Terry Pratchett' />
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
               rel='icon'
