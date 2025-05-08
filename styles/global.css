@@ -273,8 +273,18 @@ blockquote {
   }
   &.collection-edef92ce-0a6f-41e7-b882-2c54bb0a94ad {
     /* Videos */
-    .notion-table {
-      overflow: hidden;
+    .notion-block-172a2395517b80af991de37f7a7be13b {
+      .notion-collection-group {
+        .notion-collection-group-title {
+        }
+        .notion-table {
+          overflow: hidden;
+        }
+      }
+      details:last-of-type {
+        /* your styles here */
+        display: none;
+      }
     }
     .notion-collection-row-body {
       .notion-property-file img {
