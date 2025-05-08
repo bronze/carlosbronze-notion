@@ -278,7 +278,7 @@ blockquote {
         .notion-collection-group-title {
         }
         .notion-table {
-          overflow: hidden;
+          /* overflow: hidden; */
         }
       }
       details:last-of-type {
