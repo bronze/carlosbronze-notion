@@ -273,6 +273,9 @@ blockquote {
   }
   &.collection-edef92ce-0a6f-41e7-b882-2c54bb0a94ad {
     /* Videos */
+    .notion-table {
+      overflow: hidden;
+    }
     .notion-collection-row-body {
       .notion-property-file img {
         min-height: 300px;
