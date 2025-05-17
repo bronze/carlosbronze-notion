@@ -392,8 +392,63 @@ blockquote {
 .dark-mode .notion-yellow_background {
   padding: 3px;
 }
-
-.dark-mode .notion-yellow_background {
-  background: #56432a !important;
-  padding: 3px;
+.notion {
+  .notion-blue_background {
+    background: rgba(231, 243, 248, 1);
+  }
+  .notion-brown_background {
+    background: rgba(244, 238, 238, 1);
+  }
+  .notion-gray_background {
+    background: rgba(248, 248, 247, 1);
+  }
+  .notion-orange_background {
+  }
+  .notion-pink_background {
+    background: rgba(252, 241, 246, 1);
+  }
+  .notion-purple_background {
+    background: rgba(248, 243, 252, 1);
+  }
+  .notion-red_background {
+    background: rgba(253, 235, 236, 1);
+  }
+  .notion-teal_background {
+    background: rgba(237, 243, 236, 1);
+  }
+  .notion-yellow_background {
+    /* rgba(86, 67, 40, 1) */
+    background: rgba(251, 243, 219, 1);
+  }
+}
+.dark-mode {
+  .notion-blue_background {
+    background: rgba(20, 58, 78, 1);
+  }
+  .notion-brown_background {
+    background: rgba(74, 50, 40, 1);
+  }
+  .notion-gray_background {
+    background: rgba(47, 47, 47, 1);
+  }
+  .notion-orange_background {
+    background: rgba(92, 59, 35, 1);
+  }
+  .notion-pink_background {
+    background: rgba(78, 44, 60, 1);
+  }
+  .notion-purple_background {
+    background: rgba(60, 45, 73, 1);
+  }
+  .notion-red_background {
+    background: rgba(82, 46, 42, 1);
+  }
+  .notion-teal_background {
+    /* aka Green */
+    background: rgba(36, 61, 48, 1);
+  }
+  .notion-yellow_background {
+    /* rgba(86, 67, 40, 1) */
+    background: rgba(86, 67, 40, 1);
+  }
 }
