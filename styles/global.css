@@ -307,6 +307,20 @@ blockquote {
     .notion-table {
       overflow: hidden;
     }
+    .notion-page-content .notion-collection {
+      .notion-gallery {
+        .notion-gallery-grid {
+          .notion-page-title {
+            width: 100%;
+            .notion-page-title-text {
+              font-size: 1.4em;
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
     .notion-block-1b3a2395517b80a09e76d6d4d3d02da9 {
       details:last-of-type {
         /* your styles here */
