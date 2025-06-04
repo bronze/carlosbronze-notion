@@ -62,6 +62,10 @@ export default siteConfig({
       pageId: '126a2395517b8092850bcb198e217ab6'
     },
     {
+      title: 'Projetos',
+      pageId: '208a2395517b804e8722c86608c0cc42'
+    },
+    {
       title: 'Sobre',
       pageId: '172a2395517b8015ab5cd9242bfc7586'
     }
