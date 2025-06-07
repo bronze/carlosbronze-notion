@@ -67,12 +67,13 @@
     "react-notion-x": "^7.4.2",
     "react-tweet": "^3.2.2",
     "react-use": "^17.6.0",
+    "rss": "^1.2.2",
     "tailwind-merge": "^3.1.0",
     "tailwindcss": "^4.1.1",
-    "vaul": "^1.1.2",
-    "rss": "^1.2.2"
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
+    "@fisch0920/config": "^1.1.2",
     "@fisch0920/eslint-config": "^1.4.0",
     "@iconify/react": "^5.2.1",
     "@next/bundle-analyzer": "^15.3.3",
@@ -87,7 +88,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "overrides": {
     "cacheable-request": {
