@@ -17,6 +17,7 @@ import 'styles/prism-theme.css'
 import type { AppProps } from 'next/app'
 import * as amplitude from '@amplitude/analytics-browser'
 import * as Fathom from 'fathom-client'
+import { Geist } from 'next/font/google'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
 import * as React from 'react'
@@ -32,6 +33,12 @@ import {
   posthogConfig,
   posthogId
 } from '@/lib/config'
+
+const geist = Geist({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-geist'
+})
 
 if (!isServer) {
   bootstrap()
@@ -63,6 +70,8 @@ export default function App({ Component, pageProps }: AppProps) {
       //   window.posthog = posthog
       // }
     }
+    // Dynamically update font on route change
+    // document.documentElement.style.setProperty('--font-geist', geist.variable)
 
     if (amplitudeId) {
       amplitude.init(amplitudeId, amplitudeConfig)
@@ -79,5 +88,22 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    // https://github.com/vercel/next.js/issues/44840
+    // https://nextjs.org/docs/app/getting-started/fonts
+    // https://dev.to/sdorra/nextjs-13-fonts-with-tailwind-2l4l
+    <>
+      {/* <style
+        dangerouslySetInnerHTML={{
+          __html: `
+        :root {
+          --font-sans:var(--font-geist);
+        }`
+        }}
+      /> */}
+      <div className={`${geist.variable}`}>
+        <Component {...pageProps} />
+      </div>
+    </>
+  )
 }

@@ -61,7 +61,7 @@ const quotes = [
 ]
 
 export class HeroHeader extends Component<{ className?: string }> {
-  state = {
+  override state = {
     quote: '',
     author: ''
   }
@@ -91,12 +91,13 @@ export class HeroHeader extends Component<{ className?: string }> {
   //   heroHeader.style.minHeight = `${newHeight}px`
   // }
 
-  componentDidMount() {
+  override componentDidMount() {
     // window.addEventListener('load', this.adjustHeroHeader)
     // window.addEventListener('resize', this.adjustHeroHeader)
     // this.adjustHeroHeader()
 
-    const { quote, author } = this.getRandomQuote()
+    const randomQuote = this.getRandomQuote() || { quote: '', author: '' }
+    const { quote, author } = randomQuote
     this.setState({ quote, author }, () => {
       const heroHeader = document.querySelector('.heroheader') as HTMLElement
       if (heroHeader) {
@@ -105,16 +106,16 @@ export class HeroHeader extends Component<{ className?: string }> {
     })
   }
 
-  componentDidUpdate() {
+  override componentDidUpdate() {
     // this.adjustHeroHeader()
   }
 
-  componentWillUnmount() {
+  override componentWillUnmount() {
     // window.removeEventListener('load', this.adjustHeroHeader)
     // window.removeEventListener('resize', this.adjustHeroHeader)
   }
 
-  render() {
+  override render() {
     const { quote, author } = this.state
     return (
       <header
