@@ -43,6 +43,8 @@ export const pageUrlAdditions = cleanPageUrlMap(
   { label: 'pageUrlAdditions' }
 )
 
+export const maxDepth: number = getRequiredSiteConfig('maxDepth')
+
 export const inversePageUrlOverrides = invertPageUrlOverrides(pageUrlOverrides)
 
 export const environment = process.env.NODE_ENV || 'development'

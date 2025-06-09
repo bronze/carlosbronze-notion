@@ -1,6 +1,9 @@
 import type * as types from './types'
 
 export interface SiteConfig {
+  // Add maxDepth configuration
+  maxDepth?: number
+
   rootNotionPageId: string
   rootNotionSpaceId?: string | null
 
