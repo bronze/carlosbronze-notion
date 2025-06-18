@@ -7,7 +7,9 @@
  * places to add some flare.
  */
 @import 'tailwindcss';
-
+body {
+  /* @apply text-base; */
+}
 .notion {
   --notion-max-width: 900px;
   --notion-header-height: 60px;
@@ -200,16 +202,19 @@
   }
 }
 
-.dark-mode .notion-blue_background,
-.dark-mode .notion-brown_background,
-.dark-mode .notion-gray_background,
-.dark-mode .notion-orange_background,
-.dark-mode .notion-pink_background,
-.dark-mode .notion-purple_background,
-.dark-mode .notion-red_background,
-.dark-mode .notion-teal_background,
-.dark-mode .notion-yellow_background {
-  padding: 3px;
+.notion-text,
+.notion-list {
+  .notion-blue_background,
+  .notion-brown_background,
+  .notion-gray_background,
+  .notion-orange_background,
+  .notion-pink_background,
+  .notion-purple_background,
+  .notion-red_background,
+  .notion-teal_background,
+  .notion-yellow_background {
+    padding: 3px;
+  }
 }
 .notion {
   .notion-blue_background {
@@ -271,4 +276,7 @@
     /* rgba(86, 67, 40, 1) */
     background: rgba(86, 67, 40, 1);
   }
+}
+.notion-table-of-contents-item {
+  @apply text-base;
 }
