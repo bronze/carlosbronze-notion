@@ -17,6 +17,12 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+            {/* Umami Analytics */}
+            <script
+              defer
+              src='https://cloud.umami.is/script.js'
+              data-website-id='b01a5d15-0458-4258-81f5-705de4b35142'
+            ></script>
           </Head>
 
           <body>
