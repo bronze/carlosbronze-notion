@@ -23,6 +23,12 @@ export default class MyDocument extends Document {
               src='https://cloud.umami.is/script.js'
               data-website-id='b01a5d15-0458-4258-81f5-705de4b35142'
             ></script>
+            {/* simpleanalytics */}
+            <script
+              async
+              defer
+              src='https://scripts.simpleanalyticscdn.com/latest.js'
+            ></script>
           </Head>
 
           <body>
