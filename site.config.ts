@@ -1,6 +1,9 @@
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
+  // Add maxDepth configuration
+  maxDepth: 4, // Default value
+
   // the site's root Notion page (required)
   rootNotionPageId: '172a2395517b80ab99f3c11f5bb41e8f',
 

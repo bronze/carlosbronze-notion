@@ -19,7 +19,7 @@ import * as amplitude from '@amplitude/analytics-browser'
 import * as Fathom from 'fathom-client'
 import { Geist } from 'next/font/google'
 import { useRouter } from 'next/router'
-import posthog from 'posthog-js'
+import { posthog } from 'posthog-js'
 import * as React from 'react'
 
 import { bootstrap } from '@/lib/bootstrap-client'

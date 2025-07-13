@@ -1,8 +1,11 @@
 import type * as types from './types'
 
 export interface SiteConfig {
+  // Add maxDepth configuration
+  maxDepth?: number
+
   rootNotionPageId: string
-  rootNotionSpaceId?: string
+  rootNotionSpaceId?: string | null
 
   name: string
   domain: string
@@ -31,8 +34,8 @@ export interface SiteConfig {
   isSearchEnabled?: boolean
 
   includeNotionIdInUrls?: boolean
-  pageUrlOverrides?: types.PageUrlOverridesMap
-  pageUrlAdditions?: types.PageUrlOverridesMap
+  pageUrlOverrides?: types.PageUrlOverridesMap | null
+  pageUrlAdditions?: types.PageUrlOverridesMap | null
 
   navigationStyle?: types.NavigationStyle
   navigationLinks?: Array<NavigationLink>

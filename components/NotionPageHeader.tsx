@@ -65,6 +65,7 @@ export function NotionPageHeader({
   const renderNavigationLinks = () => (
     <>
       {navigationLinks?.map((link, index) => {
+        if (!link) return null
         if (!link.pageId && !link.url) return null
 
         return (
