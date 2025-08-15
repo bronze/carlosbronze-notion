@@ -29,6 +29,11 @@ export default class MyDocument extends Document {
               defer
               src='https://scripts.simpleanalyticscdn.com/latest.js'
             ></script>
+            {/* Statsig */}
+            <script
+              defer
+              src='https://cdn.jsdelivr.net/npm/@statsig/js-client@3/build/statsig-js-client+session-replay+web-analytics.min.js?apikey=client-TbzSo5YOqzaTFnQ19JcLQgjUeTTFCt9gHdpqS9vIL5X'
+            ></script>
           </Head>
 
           <body>
