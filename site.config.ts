@@ -26,7 +26,7 @@ export default siteConfig({
   bluesky: 'carlosbronze.com.br',
   onlyfans: 'lol',
   resume:
-    'https://docs.google.com/document/d/1QjJRMyWnHIhv6_bAtlz2mGRNnZZw81rjCOGd4ZlmZpY/edit?usp=sharing',
+    'https://docs.google.com/document/d/1nlJqRN7Kj4T9uKCzs4ulC5ApRzp_FqOKsEOCcTJ4GqM/edit?usp=sharing',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
