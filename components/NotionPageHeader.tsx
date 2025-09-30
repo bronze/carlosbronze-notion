@@ -10,12 +10,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink
 } from '@/components/ui/navigation-menu'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from '@/components/ui/tooltip'
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
@@ -28,26 +22,19 @@ function ToggleThemeButton() {
   }, [])
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button
-            variant='ghost'
-            size='icon'
-            onClick={toggleDarkMode}
-            title='Dark Mode Toggle'
-            className='p-3 cursor-pointer button rounded-[3px] hover:bg-(--bg-color-0)'
-          >
-            {hasMounted && isDarkMode ? (
-              <Icon icon='ph:moon-fill' className='text-base' />
-            ) : (
-              <Icon icon='ph:sun-fill' className='text-base' />
-            )}
-          </Button>
-        </TooltipTrigger>
-        {/* <TooltipContent>Toggle Theme</TooltipContent> */}
-      </Tooltip>
-    </TooltipProvider>
+    <Button
+      variant='ghost'
+      size='icon'
+      onClick={toggleDarkMode}
+      title='Dark Mode Toggle'
+      className='p-3 cursor-pointer button rounded-[3px] hover:bg-(--bg-color-0)'
+    >
+      {hasMounted && isDarkMode ? (
+        <Icon icon='ph:moon-fill' className='text-base' />
+      ) : (
+        <Icon icon='ph:sun-fill' className='text-base' />
+      )}
+    </Button>
   )
 }
 
