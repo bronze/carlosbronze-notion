@@ -45,7 +45,7 @@ function ToggleThemeButton() {
             )}
           </Button>
         </TooltipTrigger>
-        <TooltipContent>Toggle Theme</TooltipContent>
+        {/* <TooltipContent>Toggle Theme</TooltipContent> */}
       </Tooltip>
     </TooltipProvider>
   )
