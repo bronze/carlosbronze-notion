@@ -273,13 +273,13 @@ export function NotionPage({
     recordMap
   })
 
-  if (!config.isServer) {
-    // add important objects to the window global for easy debugging
-    const g = window as any
-    g.pageId = pageId
-    g.recordMap = recordMap
-    g.block = block
-  }
+  // if (!config.isServer) {
+  //   // add important objects to the window global for easy debugging
+  //   const g = window as any
+  //   g.pageId = pageId
+  //   g.recordMap = recordMap
+  //   g.block = block
+  // }
 
   const canonicalPageUrl = config.isDev
     ? undefined

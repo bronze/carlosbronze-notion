@@ -1,9 +1,12 @@
 import * as amplitude from '@amplitude/analytics-browser'
-import posthog from 'posthog-js'
-import React, { useEffect, useState } from 'react'
+import posthogClient from 'posthog-js'
+import React, { useState } from 'react'
 
 function BronzePage() {
-  const [userId, setUserId] = useState('')
+  const [userId, setUserId] = useState<string>(() => {
+    if (typeof window === 'undefined') return ''
+    return localStorage.getItem('user_id') ?? ''
+  })
 
   // Function to send user ID to analytics platforms
   const sendUserId = () => {
@@ -15,7 +18,7 @@ function BronzePage() {
       if (typeof window !== 'undefined' && userId) {
         // console.log('PostHog object:', window.posthog)
         console.log('Identifying in PostHog with userId:', userId)
-        posthog.identify(userId, {
+        posthogClient.identify(userId, {
           // Additional properties can be sent here
         })
       } else {
@@ -33,14 +36,6 @@ function BronzePage() {
       console.log('No user ID found.')
     }
   }
-
-  useEffect(() => {
-    // Autofill the input field with the current user ID if it exists
-    const storedUserId = localStorage.getItem('user_id')
-    if (storedUserId) {
-      setUserId(storedUserId)
-    }
-  }, [])
 
   // Function to set a custom user ID
   const handleSetCustomUserId = () => {
