@@ -11,8 +11,8 @@ import {
   NavigationMenuLink
 } from '@/components/ui/navigation-menu'
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
-import { MoonIcon } from '@/lib/icons/moon'
-import { SunIcon } from '@/lib/icons/sun'
+// import { MoonIcon } from '@/lib/icons/moon'
+// import { SunIcon } from '@/lib/icons/sun'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 function ToggleThemeButton() {
