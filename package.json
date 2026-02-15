@@ -13,6 +13,8 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "lint": "next lint",
+    "prebuild": "next lint",
     "build": "next build",
     "start": "next start",
     "deploy": "vercel deploy",
