@@ -13,11 +13,14 @@ import * as React from 'react'
 // import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import { Button } from '@/components/ui/button'
 import * as config from '@/lib/config'
+// import { GitHubIcon } from '@/lib/icons/github'
+// import { LinkedInIcon } from '@/lib/icons/linkedin'
+// import { MoonIcon } from '@/lib/icons/moon'
+// import { SunIcon } from '@/lib/icons/sun'
+// import { TwitterIcon } from '@/lib/icons/twitter'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
-
-// TODO: merge the data and icons from PageSocial with the social links in Footer
 
 export function FooterImpl() {
   const [hasMounted, setHasMounted] = React.useState(false)
