@@ -60,10 +60,10 @@ export default siteConfig({
   // navigationStyle: 'default'
   navigationStyle: 'custom',
   navigationLinks: [
-    {
-      title: 'Produto',
-      pageId: '126a2395517b8092850bcb198e217ab6'
-    },
+    // {
+    //   title: 'Produto',
+    //   pageId: '126a2395517b8092850bcb198e217ab6'
+    // },
     {
       title: 'Projetos',
       pageId: '208a2395517b804e8722c86608c0cc42'
